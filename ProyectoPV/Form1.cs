@@ -22,14 +22,20 @@ namespace ProyectoPV
 
         private void frmAgregar_Load(object sender, EventArgs e)
         {
-            using (SistemaPrestamosPVEntities db= new SistemaPrestamosPVEntities())
+            LoadData();
+        }
+
+        #region LOADDATA
+        private void LoadData()
+        {
+            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
-                var lst = from d in db.Deudores
+                var lst = from d in db.Deudores1
                           select d;
                 dgvDeudores.DataSource = lst.ToList();
             }
-
         }
+        #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -38,8 +44,39 @@ namespace ProyectoPV
 
         }
 
-        
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Presentacion.frmTabla oFrmTabla = new Presentacion.frmTabla();
+            oFrmTabla.ShowDialog();
+            LoadData();
+        }
 
-           
+        #region GETID
+        private int? GetId()
+        {
+            try
+            {
+                return int.Parse(dgvDeudores.Rows[dgvDeudores.CurrentRow.Index].Cells[0].Value.ToString());
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+        #endregion
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int? id = GetId();
+            if (id != null)
+            {
+                Presentacion.frmTabla oFrmTabla = new Presentacion.frmTabla(id);
+                oFrmTabla.ShowDialog();
+                LoadData();
+            }
+
+
+        }
     }
 }

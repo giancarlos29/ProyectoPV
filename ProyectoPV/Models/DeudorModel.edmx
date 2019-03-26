@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SistemaPrestamosPVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SistemaPrestamosPVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Deudores">
           <Key>
             <PropertyRef Name="ID" />
@@ -14,17 +14,20 @@
           <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Capital" Type="float" />
           <Property Name="Interes" Type="float" />
-          <Property Name="FechaInicializacionPrestamo" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Telefono" Type="varchar" MaxLength="15" />
+          <Property Name="Telefono2" Type="varchar" MaxLength="15" />
+          <Property Name="FechaInicializacionPrestamo" Type="date" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="200" />
         </EntityType>
         <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
           <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SistemaPrestamosPVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Deudore">
+        <EntityType Name="Deudores">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -33,10 +36,14 @@
           <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Capital" Type="Double" />
           <Property Name="Interes" Type="Double" />
-          <Property Name="FechaInicializacionPrestamo" Type="DateTime" Precision="0" />
+          <Property Name="FechaInicializacionPrestamo" Type="DateTime" Precision="0" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="SistemaPrestamosPVEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Deudores" EntityType="Self.Deudore" />
+          <EntitySet Name="Deudores1" EntityType="SistemaPrestamosPVModel.Deudores" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -44,9 +51,13 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SistemaPrestamosPVModelStoreContainer" CdmEntityContainer="SistemaPrestamosPVEntities">
-          <EntitySetMapping Name="Deudores">
-            <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Deudore">
+          <EntitySetMapping Name="Deudores1">
+            <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Deudores">
               <MappingFragment StoreEntitySet="Deudores">
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono2" ColumnName="Telefono2" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
                 <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />

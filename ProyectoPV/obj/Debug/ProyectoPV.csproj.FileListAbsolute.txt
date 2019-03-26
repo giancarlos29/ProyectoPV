@@ -13,3 +13,4 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramewo
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.SqlServer.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csproj.CopyComplete
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmTabla.resources

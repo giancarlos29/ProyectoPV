@@ -9,7 +9,11 @@
     <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Capital" Type="float" />
     <Property Name="Interes" Type="float" />
-    <Property Name="FechaInicializacionPrestamo" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Telefono" Type="varchar" MaxLength="15" />
+    <Property Name="Telefono2" Type="varchar" MaxLength="15" />
+    <Property Name="FechaInicializacionPrestamo" Type="date" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
     <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />

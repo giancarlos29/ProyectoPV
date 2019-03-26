@@ -12,13 +12,17 @@ namespace ProyectoPV.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Deudore
+    public partial class Deudores
     {
         public int ID { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public Nullable<double> Capital { get; set; }
         public Nullable<double> Interes { get; set; }
-        public Nullable<System.DateTime> FechaInicializacionPrestamo { get; set; }
+        public System.DateTime FechaInicializacionPrestamo { get; set; }
+        public string Email { get; set; }
+        public string Telefono { get; set; }
+        public string Telefono2 { get; set; }
+        public string Direccion { get; set; }
     }
 }
