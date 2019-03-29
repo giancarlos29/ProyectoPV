@@ -16,6 +16,6 @@
     <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="SistemaPrestamosPVEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Deudores1" EntityType="SistemaPrestamosPVModel.Deudores" />
+    <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
   </EntityContainer>
 </Schema>

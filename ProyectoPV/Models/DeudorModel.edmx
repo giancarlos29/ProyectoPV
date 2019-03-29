@@ -43,7 +43,7 @@
           <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="SistemaPrestamosPVEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Deudores1" EntityType="SistemaPrestamosPVModel.Deudores" />
+          <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -51,7 +51,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SistemaPrestamosPVModelStoreContainer" CdmEntityContainer="SistemaPrestamosPVEntities">
-          <EntitySetMapping Name="Deudores1">
+          <EntitySetMapping Name="Deudores">
             <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Deudores">
               <MappingFragment StoreEntitySet="Deudores">
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />

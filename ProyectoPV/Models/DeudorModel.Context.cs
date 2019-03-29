@@ -25,6 +25,6 @@ namespace ProyectoPV.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Deudores> Deudores1 { get; set; }
+        public virtual DbSet<Deudores> Deudores { get; set; }
     }
 }

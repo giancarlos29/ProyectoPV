@@ -30,7 +30,7 @@ namespace ProyectoPV
         {
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
-                var lst = from d in db.Deudores1
+                var lst = from d in db.Deudores
                           select d;
                 dgvDeudores.DataSource = lst.ToList();
             }
