@@ -12,10 +12,10 @@ using ProyectoPV.Models;
 
 namespace ProyectoPV
 {
-    public partial class frmAgregar : Form
+    public partial class frmClientes : Form
     {
 
-        public frmAgregar()
+        public frmClientes()
         {
             InitializeComponent();
         }
@@ -76,6 +76,23 @@ namespace ProyectoPV
                 LoadData();
             }
 
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int? id = GetId();
+            if (id != null)
+            {
+                using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+                {
+                    Deudores oTabla = db.Deudores.Find(id);
+                    db.Deudores.Remove(oTabla);
+                    db.SaveChanges();
+                    MessageBox.Show("Regristro Borrado!");
+                }
+                LoadData();
+            }   
 
         }
     }

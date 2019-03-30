@@ -1,6 +1,6 @@
 ﻿namespace ProyectoPV
 {
-    partial class frmAgregar
+    partial class frmClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvDeudores = new System.Windows.Forms.DataGridView();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.dgvDeudores = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -49,6 +50,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnEliminar);
             this.splitContainer1.Panel1.Controls.Add(this.btnEditar);
             this.splitContainer1.Panel1.Controls.Add(this.btnNuevo);
             // 
@@ -59,16 +61,15 @@
             this.splitContainer1.SplitterDistance = 61;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dgvDeudores
+            // btnEditar
             // 
-            this.dgvDeudores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeudores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDeudores.Location = new System.Drawing.Point(0, 0);
-            this.dgvDeudores.MultiSelect = false;
-            this.dgvDeudores.Name = "dgvDeudores";
-            this.dgvDeudores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDeudores.Size = new System.Drawing.Size(930, 385);
-            this.dgvDeudores.TabIndex = 0;
+            this.btnEditar.Location = new System.Drawing.Point(395, 26);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -80,25 +81,37 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnEditar
+            // dgvDeudores
             // 
-            this.btnEditar.Location = new System.Drawing.Point(118, 26);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.dgvDeudores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.dgvDeudores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeudores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDeudores.Location = new System.Drawing.Point(0, 0);
+            this.dgvDeudores.MultiSelect = false;
+            this.dgvDeudores.Name = "dgvDeudores";
+            this.dgvDeudores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeudores.Size = new System.Drawing.Size(930, 385);
+            this.dgvDeudores.TabIndex = 0;
             // 
-            // frmAgregar
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(814, 26);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "frmAgregar";
+            this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Mantenimiento de Clientes";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -115,6 +128,7 @@
         private System.Windows.Forms.DataGridView dgvDeudores;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
 

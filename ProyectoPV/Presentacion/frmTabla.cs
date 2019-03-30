@@ -67,7 +67,15 @@ namespace ProyectoPV.Presentacion
                 }
                 else
                 {
-                    db.Deudores.Attach(oTabla);
+                    oTabla.Nombres = txtNombres.Text;
+                    oTabla.Apellidos = txtApellidos.Text;
+                    oTabla.Capital = Convert.ToSingle(txtCapital.Text);
+                    oTabla.Interes = Convert.ToSingle(txtInteres.Text);
+                    oTabla.FechaInicializacionPrestamo = dateTimePicker1.Value;
+                    oTabla.Telefono = txtTelefono.Text;
+                    oTabla.Telefono2 = txtTelefono2.Text;
+                    oTabla.Email = txtEmail.Text;
+                    oTabla.Direccion = txtDireccion.Text;
                     db.Entry(oTabla).State = EntityState.Modified;
                     MessageBox.Show("Registro editado");
                 }

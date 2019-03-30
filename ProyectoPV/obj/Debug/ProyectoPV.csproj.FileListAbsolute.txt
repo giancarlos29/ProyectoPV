@@ -7,10 +7,10 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.cs
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csproj.CoreCompileInputs.cache
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.exe
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.pdb
-D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmAgregar.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.dll
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.SqlServer.dll
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.SqlServer.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csproj.CopyComplete
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmTabla.resources
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmClientes.resources
