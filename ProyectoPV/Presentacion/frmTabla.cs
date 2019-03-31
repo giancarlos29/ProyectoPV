@@ -37,7 +37,8 @@ namespace ProyectoPV.Presentacion
                 txtNombres.Text = oTabla.Nombres;
                 txtApellidos.Text = oTabla.Apellidos;
                 txtCapital.Text = oTabla.Capital.ToString();
-                txtInteres.Text = oTabla.Interes.ToString();
+                var interes = Convert.ToSingle(oTabla.Interes) * 100;
+                txtInteres.Text = interes.ToString();
                 dateTimePicker1.Value = oTabla.FechaInicializacionPrestamo;
                 txtTelefono.Text = oTabla.Telefono;
                 txtTelefono2.Text = oTabla.Telefono2;
@@ -70,7 +71,8 @@ namespace ProyectoPV.Presentacion
                     oTabla.Nombres = txtNombres.Text;
                     oTabla.Apellidos = txtApellidos.Text;
                     oTabla.Capital = Convert.ToSingle(txtCapital.Text);
-                    oTabla.Interes = Convert.ToSingle(txtInteres.Text);
+                    var interes = Convert.ToSingle(oTabla.Interes) * 100;
+                    oTabla.Interes = interes;
                     oTabla.FechaInicializacionPrestamo = dateTimePicker1.Value;
                     oTabla.Telefono = txtTelefono.Text;
                     oTabla.Telefono2 = txtTelefono2.Text;
