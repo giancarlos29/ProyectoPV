@@ -53,7 +53,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(251, 216);
+            this.textBox1.Location = new System.Drawing.Point(251, 163);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 6;
@@ -63,7 +63,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 173);
+            this.label2.Location = new System.Drawing.Point(107, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 8;
@@ -74,7 +74,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuario.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(98, 215);
+            this.lblUsuario.Location = new System.Drawing.Point(98, 162);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(144, 19);
             this.lblUsuario.TabIndex = 7;
@@ -85,7 +85,7 @@
             this.lblTipoDePago.AutoSize = true;
             this.lblTipoDePago.BackColor = System.Drawing.Color.Transparent;
             this.lblTipoDePago.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoDePago.Location = new System.Drawing.Point(98, 125);
+            this.lblTipoDePago.Location = new System.Drawing.Point(98, 72);
             this.lblTipoDePago.Name = "lblTipoDePago";
             this.lblTipoDePago.Size = new System.Drawing.Size(126, 19);
             this.lblTipoDePago.TabIndex = 7;
@@ -98,7 +98,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Efectivo",
             "Transferencia"});
-            this.comboBox1.Location = new System.Drawing.Point(251, 126);
+            this.comboBox1.Location = new System.Drawing.Point(251, 73);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(101, 21);
             this.comboBox1.TabIndex = 9;
@@ -108,7 +108,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(256, 173);
+            this.label3.Location = new System.Drawing.Point(256, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 10;
@@ -119,7 +119,7 @@
             this.button2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::ProyectoPV.Properties.Resources.if_system_log_out_118796;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 264);
+            this.button2.Location = new System.Drawing.Point(12, 202);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 122);
             this.button2.TabIndex = 12;
@@ -132,19 +132,20 @@
             this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::ProyectoPV.Properties.Resources.aceptar;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(247, 264);
+            this.button1.Location = new System.Drawing.Point(247, 202);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 122);
             this.button1.TabIndex = 11;
             this.button1.Text = "Aplicar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 403);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 331);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(466, 100);
             this.flowLayoutPanel1.TabIndex = 13;
@@ -154,7 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(466, 503);
+            this.ClientSize = new System.Drawing.Size(466, 431);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
