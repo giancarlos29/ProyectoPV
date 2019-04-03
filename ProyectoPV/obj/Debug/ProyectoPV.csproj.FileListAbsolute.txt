@@ -16,3 +16,5 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Pr
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmClientes.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmLogin.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmPrincipal.resources
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmAbonarSaldar.resources
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.AdministrarUsuarios.resources

@@ -37,7 +37,7 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtCapital = new System.Windows.Forms.TextBox();
             this.txtInteres = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicializacionPrestamo = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblTelefono2 = new System.Windows.Forms.Label();
@@ -47,6 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblPocentaje = new System.Windows.Forms.Label();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.lblCedula = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNombres
@@ -123,17 +126,18 @@
             this.txtInteres.Name = "txtInteres";
             this.txtInteres.Size = new System.Drawing.Size(48, 20);
             this.txtInteres.TabIndex = 8;
+            this.txtInteres.Text = "10";
             // 
-            // dateTimePicker1
+            // dtpFechaInicializacionPrestamo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(235, 185);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dtpFechaInicializacionPrestamo.Location = new System.Drawing.Point(235, 185);
+            this.dtpFechaInicializacionPrestamo.Name = "dtpFechaInicializacionPrestamo";
+            this.dtpFechaInicializacionPrestamo.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaInicializacionPrestamo.TabIndex = 9;
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(599, 245);
+            this.btnGuardar.Location = new System.Drawing.Point(467, 439);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 10;
@@ -206,11 +210,40 @@
             this.txtDireccion.Size = new System.Drawing.Size(307, 51);
             this.txtDireccion.TabIndex = 18;
             // 
+            // lblPocentaje
+            // 
+            this.lblPocentaje.AutoSize = true;
+            this.lblPocentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPocentaje.Location = new System.Drawing.Point(284, 145);
+            this.lblPocentaje.Name = "lblPocentaje";
+            this.lblPocentaje.Size = new System.Drawing.Size(22, 16);
+            this.lblPocentaje.TabIndex = 21;
+            this.lblPocentaje.Text = "%";
+            // 
+            // txtCedula
+            // 
+            this.txtCedula.Location = new System.Drawing.Point(235, 399);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(307, 20);
+            this.txtCedula.TabIndex = 23;
+            // 
+            // lblCedula
+            // 
+            this.lblCedula.AutoSize = true;
+            this.lblCedula.Location = new System.Drawing.Point(60, 406);
+            this.lblCedula.Name = "lblCedula";
+            this.lblCedula.Size = new System.Drawing.Size(43, 13);
+            this.lblCedula.TabIndex = 22;
+            this.lblCedula.Text = "Cedula:";
+            // 
             // frmTabla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 409);
+            this.ClientSize = new System.Drawing.Size(585, 473);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.lblCedula);
+            this.Controls.Add(this.lblPocentaje);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
@@ -220,7 +253,7 @@
             this.Controls.Add(this.lblTelefono2);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFechaInicializacionPrestamo);
             this.Controls.Add(this.txtInteres);
             this.Controls.Add(this.txtCapital);
             this.Controls.Add(this.txtApellidos);
@@ -254,7 +287,7 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtCapital;
         private System.Windows.Forms.TextBox txtInteres;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicializacionPrestamo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblTelefono2;
@@ -264,5 +297,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label lblPocentaje;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label lblCedula;
     }
 }
