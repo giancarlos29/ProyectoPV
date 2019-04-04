@@ -9,16 +9,19 @@
     <Property Name="Apellidos" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Capital" Type="float" Nullable="false" />
     <Property Name="Interes" Type="float" />
+    <Property Name="ReditoMensual" Type="float" />
+    <Property Name="ReditoAcumulado" Type="float" />
+    <Property Name="CuotasVencidas" Type="int" />
     <Property Name="FechaInicializacionPrestamo" Type="date" Nullable="false" />
+    <Property Name="UltimoPago" Type="date" Nullable="false" />
+    <Property Name="CuotasPagadas" Type="int" />
+    <Property Name="CuotasPagadasATiempo" Type="int" />
+    <Property Name="Score" Type="int" />
+    <Property Name="Cedula" Type="varchar" MaxLength="11" />
     <Property Name="Telefono" Type="varchar" MaxLength="15" />
     <Property Name="Telefono2" Type="varchar" MaxLength="15" />
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Direccion" Type="varchar" MaxLength="200" />
-    <Property Name="UltimoPago" Type="date" Nullable="false" />
-    <Property Name="CuotasVencidas" Type="int" />
-    <Property Name="ReditoMensual" Type="float" />
-    <Property Name="ReditoAcumulado" Type="float" />
-    <Property Name="Cedula" Type="varchar" MaxLength="11" />
   </EntityType>
   <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
     <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />

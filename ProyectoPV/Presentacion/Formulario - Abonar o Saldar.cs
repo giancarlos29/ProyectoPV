@@ -25,6 +25,9 @@ namespace ProyectoPV.Presentacion
             InitializeComponent();
             this.saldador = saldador;
             label3.Text = saldador.Nombres + " " + saldador.Apellidos;
+            label4.Text = saldador.Capital.ToString();
+            label6.Text = saldador.ReditoAcumulado.ToString();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,13 +39,28 @@ namespace ProyectoPV.Presentacion
                 if (saldador.ReditoAcumulado > 0)
                 {
                     saldador.ReditoAcumulado = saldador.ReditoAcumulado - abono;
+                    if(saldador.ReditoAcumulado < 0)
+                    {
+                        float abonocapital = Convert.ToSingle(saldador.ReditoAcumulado) * (-1);
+                        saldador.ReditoAcumulado = 0;
+                        saldador.Capital = saldador.Capital - abonocapital;
+                        MessageBox.Show("El deudor " + saldador.Nombres + " tiene su balance de reditos en:$RD"
+                            + saldador.ReditoAcumulado);
+                        MessageBox.Show("El deudor " + saldador.Nombres + " tiene su balance de capital en:$RD" 
+                            + saldador.Capital);
+                    }
                     db.Entry(saldador).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                } // REcordar mañana colocar el capital y las cuotas en este form
-                //else if ()
-                //{
-
-                //}
+                    Close();
+                }
+                else if (saldador.Capital > 0)
+                {
+                    saldador.Capital = saldador.Capital - abono;
+                    db.Entry(saldador).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    MessageBox.Show("El deudor " + saldador.Nombres + " ha disminuido su capital a " + saldador.Capital);
+                    Close();
+                }
 
             }
 

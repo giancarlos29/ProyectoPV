@@ -19,17 +19,18 @@ namespace ProyectoPV.Models
         public string Apellidos { get; set; }
         public double Capital { get; set; }
         public Nullable<double> Interes { get; set; }
+        public Nullable<double> ReditoMensual { get; set; }
         public System.DateTime FechaInicializacionPrestamo { get; set; }
-        public string Email { get; set; }
+        public Nullable<int> CuotasVencidas { get; set; }
+        public System.DateTime UltimoPago { get; set; }
+        public Nullable<int> CuotasPagadas { get; set; }
+        public Nullable<double> ReditoAcumulado { get; set; }
+        public Nullable<int> CuotasPagadasATiempo { get; set; }
+        public Nullable<int> Score { get; set; }
         public string Telefono { get; set; }
         public string Telefono2 { get; set; }
         public string Direccion { get; set; }
-        public System.DateTime UltimoPago { get; set; }
-        public Nullable<int> CuotasVencidas { get; set; }
-        public Nullable<double> ReditoMensual { get; set; }
-        public Nullable<double> ReditoAcumulado { get; set; }
         public string Cedula { get; set; }
-
-       
+        public string Email { get; set; }
     }
 }

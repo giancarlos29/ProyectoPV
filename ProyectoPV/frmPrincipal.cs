@@ -25,7 +25,6 @@ namespace ProyectoPV
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sistemaPrestamosPVDataSet.Deudores' table. You can move, or remove it, as needed.
-            this.deudoresTableAdapter.Fill(this.sistemaPrestamosPVDataSet.Deudores);
             LoadData();
         }
 
@@ -93,7 +92,7 @@ namespace ProyectoPV
                 Deudores deu = db.Deudores.Find(id);
                 frmAbonarSaldar form = new frmAbonarSaldar(deu);
                 form.ShowDialog();
-
+                LoadData();
             }
         }
 

@@ -44,7 +44,6 @@ namespace ProyectoPV.Presentacion
                 txtTelefono2.Text = oTabla.Telefono2;
                 txtDireccion.Text = oTabla.Direccion;
                 txtEmail.Text = oTabla.Email;
-
             }
         }
 
@@ -58,16 +57,26 @@ namespace ProyectoPV.Presentacion
                     oTabla.Nombres = txtNombres.Text;
                     oTabla.Apellidos = txtApellidos.Text;
                     oTabla.Capital = Convert.ToSingle(txtCapital.Text);
-                    oTabla.Interes = Convert.ToSingle(txtInteres.Text);
-                    oTabla.FechaInicializacionPrestamo = dtpFechaInicializacionPrestamo.Value;
+                    oTabla.CuotasVencidas = 0;
+                    var interes = Convert.ToSingle(txtInteres.Text);
+                    oTabla.Interes = interes;
+                    oTabla.ReditoMensual = Convert.ToSingle(txtCapital.Text) * (interes / 100);
+                    if (oTabla.CuotasVencidas == 0)
+                    {
+                        oTabla.ReditoAcumulado = oTabla.ReditoMensual;
+                    } else
+                    {
+                        oTabla.ReditoAcumulado = oTabla.ReditoMensual * oTabla.CuotasVencidas;
+                    }
+                    oTabla.FechaInicializacionPrestamo = oTabla.UltimoPago = dtpFechaInicializacionPrestamo.Value;
+                    oTabla.CuotasPagadas = 0;
+                    oTabla.CuotasPagadasATiempo = 0;
+                    oTabla.Score = 1;
+
                     oTabla.Telefono = txtTelefono.Text;
                     oTabla.Telefono2 = txtTelefono2.Text;
                     oTabla.Email = txtEmail.Text;
                     oTabla.Direccion = txtDireccion.Text;
-                    oTabla.UltimoPago = dtpFechaInicializacionPrestamo.Value;
-                    oTabla.CuotasVencidas = 0;
-                    oTabla.ReditoMensual = Convert.ToSingle(txtCapital.Text) * (Convert.ToSingle(txtInteres.Text) / 100);
-                    oTabla.ReditoAcumulado = Convert.ToSingle(txtCapital.Text) * (Convert.ToSingle(txtInteres.Text) / 100);
                     oTabla.Cedula = txtCedula.Text;
 
                     db.Deudores.Add(oTabla);

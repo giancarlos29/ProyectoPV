@@ -150,9 +150,9 @@
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Location = new System.Drawing.Point(60, 218);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
             this.lblTelefono.TabIndex = 11;
-            this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Text = "Telefono:";
             // 
             // lblTelefono2
             // 
@@ -182,9 +182,9 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Location = new System.Drawing.Point(60, 339);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
             this.lblDireccion.TabIndex = 15;
-            this.lblDireccion.Text = "Direccion";
+            this.lblDireccion.Text = "Direccion:";
             // 
             // label1
             // 
@@ -216,7 +216,7 @@
             this.lblPocentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPocentaje.Location = new System.Drawing.Point(284, 145);
             this.lblPocentaje.Name = "lblPocentaje";
-            this.lblPocentaje.Size = new System.Drawing.Size(22, 16);
+            this.lblPocentaje.Size = new System.Drawing.Size(21, 16);
             this.lblPocentaje.TabIndex = 21;
             this.lblPocentaje.Text = "%";
             // 

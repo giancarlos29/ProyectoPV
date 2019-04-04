@@ -4,6 +4,9 @@
     <EntitySetMapping Name="Deudores">
       <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Deudores">
         <MappingFragment StoreEntitySet="Deudores">
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="CuotasPagadasATiempo" ColumnName="CuotasPagadasATiempo" />
+          <ScalarProperty Name="CuotasPagadas" ColumnName="CuotasPagadas" />
           <ScalarProperty Name="Cedula" ColumnName="Cedula" />
           <ScalarProperty Name="ReditoAcumulado" ColumnName="ReditoAcumulado" />
           <ScalarProperty Name="ReditoMensual" ColumnName="ReditoMensual" />

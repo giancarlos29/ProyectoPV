@@ -35,9 +35,7 @@
             this.btnPagos = new System.Windows.Forms.Button();
             this.btnPagarUltimaCuota = new System.Windows.Forms.Button();
             this.lblAdministrarUsuarios = new System.Windows.Forms.Label();
-            this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
             this.deudoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deudoresTableAdapter = new ProyectoPV.SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +52,6 @@
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPool)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deudoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,20 +133,6 @@
             this.lblAdministrarUsuarios.Size = new System.Drawing.Size(210, 15);
             this.lblAdministrarUsuarios.TabIndex = 13;
             this.lblAdministrarUsuarios.Text = "Administrar Usuarios (log in)";
-            // 
-            // sistemaPrestamosPVDataSet
-            // 
-            this.sistemaPrestamosPVDataSet.DataSetName = "SistemaPrestamosPVDataSet";
-            this.sistemaPrestamosPVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deudoresBindingSource
-            // 
-            this.deudoresBindingSource.DataMember = "Deudores";
-            this.deudoresBindingSource.DataSource = this.sistemaPrestamosPVDataSet;
-            // 
-            // deudoresTableAdapter
-            // 
-            this.deudoresTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -275,7 +258,6 @@
             this.Text = "Sistema de Prestamos - Bienvenido";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPool)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deudoresBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -286,27 +268,10 @@
 
         private System.Windows.Forms.DataGridView dgvPool;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capitalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn interesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicializacionPrestamoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ultimoPagoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuotasVencidasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reditoMensualDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reditoAcumuladoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedulaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnPagos;
         private System.Windows.Forms.Button btnPagarUltimaCuota;
         private System.Windows.Forms.Label lblAdministrarUsuarios;
-        private SistemaPrestamosPVDataSet sistemaPrestamosPVDataSet;
         private System.Windows.Forms.BindingSource deudoresBindingSource;
-        private SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter deudoresTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
