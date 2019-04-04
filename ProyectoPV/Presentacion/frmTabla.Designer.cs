@@ -269,7 +269,7 @@
             this.Name = "frmTabla";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Datos de Tabla";
+            this.Text = "Datos de Cliente";
             this.Load += new System.EventHandler(this.frmTabla_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,6 +15,12 @@ namespace ProyectoPV
     public partial class frmClientes : Form
     {
 
+        public void ActualizaData()
+        {
+
+        }
+
+
         public frmClientes()
         {
             InitializeComponent();
@@ -28,11 +34,24 @@ namespace ProyectoPV
         #region LOADDATA
         private void LoadData()
         {
+
+
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
+                DateTime fechaActual = DateTime.Now;
+                TimeSpan periodo;
+
                 var lst = from d in db.Deudores
                           select d;
                 dgvDeudores.DataSource = lst.ToList();
+
+                foreach (var item in lst)
+                {
+                    periodo = fechaActual - item.UltimoPago;
+                    item.CuotasVencidas = periodo.Days/30;
+                    db.Entry(lst).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
             }
         }
         #endregion

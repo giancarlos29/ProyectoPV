@@ -37,7 +37,7 @@ namespace ProyectoPV.Presentacion
                 txtNombres.Text = oTabla.Nombres;
                 txtApellidos.Text = oTabla.Apellidos;
                 txtCapital.Text = oTabla.Capital.ToString();
-                var interes = Convert.ToSingle(oTabla.Interes) * 100;
+                var interes =oTabla.Interes;
                 txtInteres.Text = interes.ToString();
                 dtpFechaInicializacionPrestamo.Value = oTabla.FechaInicializacionPrestamo;
                 txtTelefono.Text = oTabla.Telefono;
@@ -72,7 +72,6 @@ namespace ProyectoPV.Presentacion
                     oTabla.CuotasPagadas = 0;
                     oTabla.CuotasPagadasATiempo = 0;
                     oTabla.Score = 1;
-
                     oTabla.Telefono = txtTelefono.Text;
                     oTabla.Telefono2 = txtTelefono2.Text;
                     oTabla.Email = txtEmail.Text;
@@ -101,7 +100,7 @@ namespace ProyectoPV.Presentacion
                 }
                 
                 db.SaveChanges();
-                this.Close();
+                Close();
             }
             
         }

@@ -24,7 +24,6 @@ namespace ProyectoPV
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'sistemaPrestamosPVDataSet.Deudores' table. You can move, or remove it, as needed.
             LoadData();
         }
 
@@ -34,10 +33,11 @@ namespace ProyectoPV
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
                 var lst = from d in db.Deudores
-                          where d.CuotasVencidas>0
+                          where d.CuotasVencidas > 0
                           select d;
                 
                 dgvPool.DataSource = lst.ToList();
+
             }
         }
         #endregion
