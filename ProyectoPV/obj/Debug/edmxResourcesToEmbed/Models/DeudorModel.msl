@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Deudores">
       <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Deudores">
         <MappingFragment StoreEntitySet="Deudores">
+          <ScalarProperty Name="CuotasGeneradas" ColumnName="CuotasGeneradas" />
           <ScalarProperty Name="Score" ColumnName="Score" />
           <ScalarProperty Name="CuotasPagadasATiempo" ColumnName="CuotasPagadasATiempo" />
           <ScalarProperty Name="CuotasPagadas" ColumnName="CuotasPagadas" />
@@ -22,6 +23,15 @@
           <ScalarProperty Name="Capital" ColumnName="Capital" />
           <ScalarProperty Name="Interes" ColumnName="Interes" />
           <ScalarProperty Name="FechaInicializacionPrestamo" ColumnName="FechaInicializacionPrestamo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

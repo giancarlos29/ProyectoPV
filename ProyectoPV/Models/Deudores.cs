@@ -21,6 +21,7 @@ namespace ProyectoPV.Models
         public Nullable<double> Interes { get; set; }
         public Nullable<double> ReditoMensual { get; set; }
         public System.DateTime FechaInicializacionPrestamo { get; set; }
+        public Nullable<int> CuotasGeneradas { get; set; }
         public Nullable<int> CuotasVencidas { get; set; }
         public System.DateTime UltimoPago { get; set; }
         public Nullable<int> CuotasPagadas { get; set; }

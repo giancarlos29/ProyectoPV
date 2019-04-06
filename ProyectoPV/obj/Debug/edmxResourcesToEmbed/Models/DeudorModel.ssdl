@@ -10,9 +10,10 @@
     <Property Name="Capital" Type="float" Nullable="false" />
     <Property Name="Interes" Type="float" />
     <Property Name="ReditoMensual" Type="float" />
-    <Property Name="ReditoAcumulado" Type="float" />
     <Property Name="CuotasVencidas" Type="int" />
+    <Property Name="ReditoAcumulado" Type="float" />
     <Property Name="FechaInicializacionPrestamo" Type="date" Nullable="false" />
+    <Property Name="CuotasGeneradas" Type="int" />
     <Property Name="UltimoPago" Type="date" Nullable="false" />
     <Property Name="CuotasPagadas" Type="int" />
     <Property Name="CuotasPagadasATiempo" Type="int" />
@@ -23,7 +24,16 @@
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Direccion" Type="varchar" MaxLength="200" />
   </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IDUsuario" />
+    </Key>
+    <Property Name="IDUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
     <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

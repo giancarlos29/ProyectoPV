@@ -17,7 +17,7 @@ namespace ProyectoPV
 
         public void ActualizaData()
         {
-
+            
         }
 
 
@@ -34,32 +34,17 @@ namespace ProyectoPV
         #region LOADDATA
         private void LoadData()
         {
-
-
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
-                DateTime fechaActual = DateTime.Now;
-                TimeSpan periodo;
-
                 var lst = from d in db.Deudores
                           select d;
                 dgvDeudores.DataSource = lst.ToList();
-
-                foreach (var item in lst)
-                {
-                    periodo = fechaActual - item.UltimoPago;
-                    item.CuotasVencidas = periodo.Days/30;
-                    db.Entry(lst).State = EntityState.Modified;
-                    db.SaveChanges();
-                }
             }
         }
         #endregion
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-           
 
         }
 

@@ -11,6 +11,7 @@
     <Property Name="Interes" Type="Double" />
     <Property Name="ReditoMensual" Type="Double" />
     <Property Name="FechaInicializacionPrestamo" Type="DateTime" Precision="0" Nullable="false" />
+    <Property Name="CuotasGeneradas" Type="Int32" />
     <Property Name="CuotasVencidas" Type="Int32" />
     <Property Name="UltimoPago" Type="DateTime" Precision="0" Nullable="false" />
     <Property Name="CuotasPagadas" Type="Int32" />
@@ -25,5 +26,14 @@
   </EntityType>
   <EntityContainer Name="SistemaPrestamosPVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
+    <EntitySet Name="Usuarios" EntityType="SistemaPrestamosPVModel.Usuario" />
   </EntityContainer>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IDUsuario" />
+    </Key>
+    <Property Name="IDUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

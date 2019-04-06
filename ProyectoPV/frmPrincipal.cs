@@ -24,6 +24,8 @@ namespace ProyectoPV
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sistemaPrestamosPVDataSet.Deudores' table. You can move, or remove it, as needed.
+            this.deudoresTableAdapter.Fill(this.sistemaPrestamosPVDataSet.Deudores);
             LoadData();
         }
 
@@ -35,9 +37,7 @@ namespace ProyectoPV
                 var lst = from d in db.Deudores
                           where d.CuotasVencidas > 0
                           select d;
-                
                 dgvPool.DataSource = lst.ToList();
-
             }
         }
         #endregion
@@ -62,12 +62,19 @@ namespace ProyectoPV
         private void btnPagarUltimaCuota_Click(object sender, EventArgs e)
         {
             var id = GetId();
+            DateTime fecha = DateTime.Now;
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
                 Deudores deu = db.Deudores.Find(id);
                 if (id != null)
                 {
-                    deu.CuotasVencidas = deu.CuotasVencidas - 1;
+                    deu.CuotasVencidas--;
+                    deu.UltimoPago = fecha;
+                    deu.CuotasPagadas++;
+                    if(deu.CuotasVencidas<2)
+                    {
+                        deu.CuotasPagadasATiempo++;
+                    }
                     db.Entry(deu).State = EntityState.Modified;
                     db.SaveChanges();
                     MessageBox.Show(deu.Nombres.ToString() +" "+ deu.Apellidos.ToString() + " Ha pagado" +
@@ -101,10 +108,17 @@ namespace ProyectoPV
 
         }
 
-        private void dgvPool_Click(object sender, EventArgs e)
+ 
+
+        private void dgvPool_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnPagarUltimaCuota.Enabled = true;
             btnPagos.Enabled = true;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

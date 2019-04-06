@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoPV.Models;
 
 namespace ProyectoPV
 {
@@ -16,5 +17,57 @@ namespace ProyectoPV
         {
             InitializeComponent();
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+            {
+               string query = (from c in db.Usuarios
+                               where c.Usuario1 == txtUsuario.Text && c.Password == textBox1.Text
+                               select c.Usuario1).FirstOrDefault();
+
+
+                if (query != null)
+                {
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DateTime fechaActual = DateTime.Now;
+                    DialogResult result = MessageBox.Show("Está seguro de que la fecha correcta es:" +
+                    fechaActual.ToString("dd/MM/yyyy"), "Confirme fecha correcta", buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        TimeSpan periodo;
+    
+                        var lst = from d in db.Deudores
+                              select d;
+
+                        foreach (var item in lst)
+                        {
+                            periodo = fechaActual - item.UltimoPago;
+                            item.CuotasVencidas = periodo.Days / 30;
+                            db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                        }
+                            db.SaveChanges();
+                        frmPrincipal frmPrincipal = new frmPrincipal();
+                        frmPrincipal.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor configure la fecha correctamente en su sistema" +
+                            " y vuelva a iniciar sección",
+                        "Actualiza la fecha en su sistema");
+                        Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o Contraseña incorrecto", "ERROR!");
+                }
+
+            }
+
+        }
+
     }
 }
