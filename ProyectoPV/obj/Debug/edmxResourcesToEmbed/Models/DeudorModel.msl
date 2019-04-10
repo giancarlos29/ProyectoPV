@@ -35,5 +35,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Saldadores">
+      <EntityTypeMapping TypeName="SistemaPrestamosPVModel.Saldadore">
+        <MappingFragment StoreEntitySet="Saldadores">
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="CuotasPagadasATiempo" ColumnName="CuotasPagadasATiempo" />
+          <ScalarProperty Name="CuotasGeneradas" ColumnName="CuotasGeneradas" />
+          <ScalarProperty Name="FechaFinalizacionPrestamo" ColumnName="FechaFinalizacionPrestamo" />
+          <ScalarProperty Name="FechaInicializacionPrestamo" ColumnName="FechaInicializacionPrestamo" />
+          <ScalarProperty Name="CapitalSaldado" ColumnName="CapitalSaldado" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="IDSaldador" ColumnName="IDSaldador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

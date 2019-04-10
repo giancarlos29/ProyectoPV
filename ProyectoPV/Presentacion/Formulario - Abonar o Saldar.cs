@@ -13,7 +13,7 @@ namespace ProyectoPV.Presentacion
 {
     public partial class frmAbonarSaldar : Form
     {
-        Deudores saldador = new Deudores();
+        Deudores abonador = new Deudores();
 
         public frmAbonarSaldar()
         {
@@ -23,7 +23,7 @@ namespace ProyectoPV.Presentacion
         public frmAbonarSaldar(Deudores saldador)
         {
             InitializeComponent();
-            this.saldador = saldador;
+            this.abonador = saldador;
             label3.Text = saldador.Nombres + " " + saldador.Apellidos;
             label4.Text = saldador.Capital.ToString();
             label6.Text = saldador.ReditoAcumulado.ToString();
@@ -35,32 +35,56 @@ namespace ProyectoPV.Presentacion
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
                 float abono = Convert.ToSingle(textBox1.Text);
+                DateTime fechaHoy = DateTime.Now;
 
-                if (saldador.ReditoAcumulado > 0)
+                if (abonador.ReditoAcumulado > 0)
                 {
-                    saldador.ReditoAcumulado = saldador.ReditoAcumulado - abono;
-                    if(saldador.ReditoAcumulado < 0)
+                    abonador.ReditoAcumulado = abonador.ReditoAcumulado - abono;
+                    if(abonador.ReditoAcumulado < 0)
                     {
-                        float abonocapital = Convert.ToSingle(saldador.ReditoAcumulado) * (-1);
-                        saldador.ReditoAcumulado = 0;
-                        saldador.Capital = saldador.Capital - abonocapital;
-                        MessageBox.Show("El deudor " + saldador.Nombres + " tiene su balance de reditos en:$RD"
-                            + saldador.ReditoAcumulado);
-                        MessageBox.Show("El deudor " + saldador.Nombres + " tiene su balance de capital en:$RD" 
-                            + saldador.Capital);
+                        float abonocapital = Convert.ToSingle(abonador.ReditoAcumulado) * (-1);
+                        abonador.ReditoAcumulado = 0;
+                        abonador.Capital = abonador.Capital - abonocapital;
+                        MessageBox.Show("El deudor " + abonador.Nombres + " tiene su balance de reditos en:$RD"
+                            + abonador.ReditoAcumulado);
+                        MessageBox.Show("El deudor " + abonador.Nombres + " tiene su balance de capital en:$RD" 
+                            + abonador.Capital);
                     }
-                    db.Entry(saldador).State = System.Data.Entity.EntityState.Modified;
+                    db.Entry(abonador).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
                     Close();
                 }
-                else if (saldador.Capital > 0)
+                else if (abonador.Capital > 0)
                 {
-                    saldador.Capital = saldador.Capital - abono;
-                    db.Entry(saldador).State = System.Data.Entity.EntityState.Modified;
+                    abonador.Capital = abonador.Capital - abono;
+                    abonador.ReditoMensual = abonador.Capital * (abonador.Interes/100);
+                    db.Entry(abonador).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    MessageBox.Show("El deudor " + saldador.Nombres + " ha disminuido su capital a " + saldador.Capital);
-                    Close();
+                    MessageBox.Show("El deudor " + abonador.Nombres + " ha disminuido su capital a " + abonador.Capital);
                 }
+                if (abonador.Capital <= 0) // Cuando el deudor salda el capital, 
+                {                               // se borra de la tabla Deudores y se envia como historico a la tabla Saldadores
+                    Saldadore saldador = new Saldadore();
+                    saldador.Nombres = abonador.Nombres;
+                    saldador.Apellidos = abonador.Apellidos;
+                    saldador.CapitalSaldado = abonador.Capital;
+                    saldador.FechaInicializacionPrestamo = abonador.FechaInicializacionPrestamo;
+                    saldador.FechaFinalizacionPrestamo = fechaHoy;
+                    saldador.CuotasGeneradas = abonador.CuotasGeneradas;
+                    saldador.CuotasPagadasATiempo = abonador.CuotasPagadasATiempo;
+                    saldador.Score = abonador.Score;
+                    saldador.Telefono = abonador.Telefono;
+                    saldador.Direccion = abonador.Direccion;
+                    saldador.Cedula = abonador.Cedula;
+                    db.Saldadores.Add(saldador);
+
+                    db.Deudores.Remove(abonador);
+                    db.SaveChanges();
+
+                    MessageBox.Show("El deudor " + abonador.Nombres + " ha saldado su deuda a RD$0.00.");
+                }
+                Close();
+
 
             }
 

@@ -99,5 +99,10 @@ namespace ProyectoPV
             }   
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

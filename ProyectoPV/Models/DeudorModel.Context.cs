@@ -27,5 +27,6 @@ namespace ProyectoPV.Models
     
         public virtual DbSet<Deudores> Deudores { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+        public virtual DbSet<Saldadore> Saldadores { get; set; }
     }
 }

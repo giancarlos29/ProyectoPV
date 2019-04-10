@@ -148,7 +148,7 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.YellowGreen;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Khaki;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 429);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -201,7 +201,7 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.YellowGreen;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Khaki;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 222);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(439, 32);

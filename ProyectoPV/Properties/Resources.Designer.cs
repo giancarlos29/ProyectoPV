@@ -153,6 +153,16 @@ namespace ProyectoPV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Historico {
+            get {
+                object obj = ResourceManager.GetObject("Historico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Pay_click_computer_dollar_money_currency_2992655 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Pay-click-computer-dollar-money-currency_2992655", resourceCulture);

@@ -27,6 +27,7 @@
   <EntityContainer Name="SistemaPrestamosPVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
     <EntitySet Name="Usuarios" EntityType="SistemaPrestamosPVModel.Usuario" />
+    <EntitySet Name="Saldadores" EntityType="SistemaPrestamosPVModel.Saldadore" />
   </EntityContainer>
   <EntityType Name="Usuario">
     <Key>
@@ -35,5 +36,22 @@
     <Property Name="IDUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Saldadore">
+    <Key>
+      <PropertyRef Name="IDSaldador" />
+    </Key>
+    <Property Name="IDSaldador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CapitalSaldado" Type="Double" />
+    <Property Name="FechaInicializacionPrestamo" Type="DateTime" Precision="0" />
+    <Property Name="FechaFinalizacionPrestamo" Type="DateTime" Precision="0" />
+    <Property Name="CuotasGeneradas" Type="Int32" />
+    <Property Name="CuotasPagadasATiempo" Type="Int32" />
+    <Property Name="Score" Type="Int32" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cedula" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

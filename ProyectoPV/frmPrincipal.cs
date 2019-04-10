@@ -68,13 +68,13 @@ namespace ProyectoPV
                 Deudores deu = db.Deudores.Find(id);
                 if (id != null)
                 {
-                    deu.CuotasVencidas--;
-                    deu.UltimoPago = fecha;
-                    deu.CuotasPagadas++;
-                    if(deu.CuotasVencidas<2)
+                    if (deu.CuotasVencidas < 2)
                     {
                         deu.CuotasPagadasATiempo++;
                     }
+                    deu.CuotasVencidas--;
+                    deu.UltimoPago = fecha;
+                    deu.CuotasPagadas++;
                     db.Entry(deu).State = EntityState.Modified;
                     db.SaveChanges();
                     MessageBox.Show(deu.Nombres.ToString() +" "+ deu.Apellidos.ToString() + " Ha pagado" +
@@ -118,7 +118,30 @@ namespace ProyectoPV
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult = MessageBox.Show("Esta seguro de que desea salir del programa?", "Aviso!", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Information);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
+           
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmClientes();
+            frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdministrarUsuarios admUsu = new AdministrarUsuarios();
+            admUsu.ShowDialog();
         }
     }
+    
 }
+

@@ -34,18 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPool = new System.Windows.Forms.DataGridView();
-            this.deudoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.deudoresTableAdapter = new ProyectoPV.SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnPagos = new System.Windows.Forms.Button();
-            this.btnPagarUltimaCuota = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.button2 = new System.Windows.Forms.Button();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,12 +53,24 @@
             this.telefono2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deudoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.deudoresTableAdapter = new ProyectoPV.SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.btnPagarUltimaCuota = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPool)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deudoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +94,7 @@
             this.dgvPool.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -111,7 +111,6 @@
             this.reditoAcumuladoDataGridViewTextBoxColumn,
             this.cuotasVencidasDataGridViewTextBoxColumn,
             this.fechaInicializacionPrestamoDataGridViewTextBoxColumn,
-            this.CuotasGeneradas,
             this.ultimoPagoDataGridViewTextBoxColumn,
             this.cuotasPagadasDataGridViewTextBoxColumn,
             this.cuotasPagadasATiempoDataGridViewTextBoxColumn,
@@ -120,7 +119,8 @@
             this.telefonoDataGridViewTextBoxColumn,
             this.telefono2DataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn});
+            this.direccionDataGridViewTextBoxColumn,
+            this.CuotasGeneradas});
             this.dgvPool.DataSource = this.deudoresBindingSource;
             this.dgvPool.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPool.EnableHeadersVisualStyles = false;
@@ -140,163 +140,6 @@
             this.dgvPool.Size = new System.Drawing.Size(1444, 196);
             this.dgvPool.TabIndex = 15;
             this.dgvPool.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPool_CellClick);
-            // 
-            // deudoresBindingSource
-            // 
-            this.deudoresBindingSource.DataMember = "Deudores";
-            this.deudoresBindingSource.DataSource = this.sistemaPrestamosPVDataSet;
-            // 
-            // sistemaPrestamosPVDataSet
-            // 
-            this.sistemaPrestamosPVDataSet.DataSetName = "SistemaPrestamosPVDataSet";
-            this.sistemaPrestamosPVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox2.Controls.Add(this.btnPagos);
-            this.groupBox2.Controls.Add(this.btnPagarUltimaCuota);
-            this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(30, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(574, 126);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ACCIONES";
-            // 
-            // deudoresTableAdapter
-            // 
-            this.deudoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.AccessibleDescription = "";
-            this.button1.AccessibleName = "";
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ProyectoPV.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_23211;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(42, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 66);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Clientes";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.AccessibleDescription = "";
-            this.btnSalir.AccessibleName = "";
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Image = global::ProyectoPV.Properties.Resources.Logout_icon;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(290, 27);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(127, 66);
-            this.btnSalir.TabIndex = 30;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnPagos
-            // 
-            this.btnPagos.BackgroundImage = global::ProyectoPV.Properties.Resources.iconfinder_payment_1954199;
-            this.btnPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnPagos.Enabled = false;
-            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagos.Location = new System.Drawing.Point(24, 36);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(139, 78);
-            this.btnPagos.TabIndex = 11;
-            this.btnPagos.Text = "Pagos";
-            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPagos.UseVisualStyleBackColor = true;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
-            // 
-            // btnPagarUltimaCuota
-            // 
-            this.btnPagarUltimaCuota.Enabled = false;
-            this.btnPagarUltimaCuota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagarUltimaCuota.Image = global::ProyectoPV.Properties.Resources.iconfinder_Pay_click_computer_dollar_money_currency_2992655;
-            this.btnPagarUltimaCuota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagarUltimaCuota.Location = new System.Drawing.Point(265, 36);
-            this.btnPagarUltimaCuota.Name = "btnPagarUltimaCuota";
-            this.btnPagarUltimaCuota.Size = new System.Drawing.Size(262, 78);
-            this.btnPagarUltimaCuota.TabIndex = 12;
-            this.btnPagarUltimaCuota.Text = "Pagar Ultima Cuota";
-            this.btnPagarUltimaCuota.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPagarUltimaCuota.UseVisualStyleBackColor = true;
-            this.btnPagarUltimaCuota.Click += new System.EventHandler(this.btnPagarUltimaCuota_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox1.BackgroundImage = global::ProyectoPV.Properties.Resources.dinero;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 387);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1444, 235);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(998, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(435, 175);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "FORMULARIOS";
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1444, 191);
-            this.splitter1.TabIndex = 13;
-            this.splitter1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.AccessibleDescription = "";
-            this.button2.AccessibleName = "";
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(165, 105);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 66);
-            this.button2.TabIndex = 52;
-            this.button2.Tag = "";
-            this.button2.Text = "Usuarios";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -427,6 +270,165 @@
             this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
             // 
+            // deudoresBindingSource
+            // 
+            this.deudoresBindingSource.DataMember = "Deudores";
+            this.deudoresBindingSource.DataSource = this.sistemaPrestamosPVDataSet;
+            // 
+            // sistemaPrestamosPVDataSet
+            // 
+            this.sistemaPrestamosPVDataSet.DataSetName = "SistemaPrestamosPVDataSet";
+            this.sistemaPrestamosPVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox2.Controls.Add(this.btnPagos);
+            this.groupBox2.Controls.Add(this.btnPagarUltimaCuota);
+            this.groupBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(30, 11);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(574, 126);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "ACCIONES";
+            // 
+            // deudoresTableAdapter
+            // 
+            this.deudoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnSalir);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(998, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(435, 175);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "FORMULARIOS";
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1444, 191);
+            this.splitter1.TabIndex = 13;
+            this.splitter1.TabStop = false;
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.BackgroundImage = global::ProyectoPV.Properties.Resources.iconfinder_payment_1954199;
+            this.btnPagos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnPagos.Enabled = false;
+            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagos.Location = new System.Drawing.Point(24, 36);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(139, 78);
+            this.btnPagos.TabIndex = 11;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPagos.UseVisualStyleBackColor = true;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            // 
+            // btnPagarUltimaCuota
+            // 
+            this.btnPagarUltimaCuota.Enabled = false;
+            this.btnPagarUltimaCuota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagarUltimaCuota.Image = global::ProyectoPV.Properties.Resources.iconfinder_Pay_click_computer_dollar_money_currency_2992655;
+            this.btnPagarUltimaCuota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPagarUltimaCuota.Location = new System.Drawing.Point(265, 36);
+            this.btnPagarUltimaCuota.Name = "btnPagarUltimaCuota";
+            this.btnPagarUltimaCuota.Size = new System.Drawing.Size(262, 78);
+            this.btnPagarUltimaCuota.TabIndex = 12;
+            this.btnPagarUltimaCuota.Text = "Pagar Ultima Cuota";
+            this.btnPagarUltimaCuota.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPagarUltimaCuota.UseVisualStyleBackColor = true;
+            this.btnPagarUltimaCuota.Click += new System.EventHandler(this.btnPagarUltimaCuota_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackgroundImage = global::ProyectoPV.Properties.Resources.dinero;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 387);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1444, 235);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.AccessibleDescription = "";
+            this.button2.AccessibleName = "";
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(165, 105);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 66);
+            this.button2.TabIndex = 52;
+            this.button2.Tag = "";
+            this.button2.Text = "Usuarios";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AccessibleDescription = "";
+            this.btnSalir.AccessibleName = "";
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = global::ProyectoPV.Properties.Resources.Logout_icon;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(290, 27);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(127, 66);
+            this.btnSalir.TabIndex = 30;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // button1
+            // 
+            this.button1.AccessibleDescription = "";
+            this.button1.AccessibleName = "";
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::ProyectoPV.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_23211;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(42, 27);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 66);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Clientes";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,8 +451,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.deudoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,7 +483,6 @@
         private System.Windows.Forms.BindingSource deudoresBindingSource;
         private SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter deudoresTableAdapter;
         private System.Windows.Forms.DataGridView dgvPool;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Splitter splitter1;
@@ -505,5 +506,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

@@ -24,6 +24,23 @@
     <Property Name="Email" Type="varchar" MaxLength="100" />
     <Property Name="Direccion" Type="varchar" MaxLength="200" />
   </EntityType>
+  <EntityType Name="Saldadores">
+    <Key>
+      <PropertyRef Name="IDSaldador" />
+    </Key>
+    <Property Name="IDSaldador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="50" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="50" />
+    <Property Name="CapitalSaldado" Type="float" />
+    <Property Name="FechaInicializacionPrestamo" Type="date" />
+    <Property Name="FechaFinalizacionPrestamo" Type="date" />
+    <Property Name="CuotasGeneradas" Type="int" />
+    <Property Name="CuotasPagadasATiempo" Type="int" />
+    <Property Name="Score" Type="int" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="varchar" MaxLength="250" />
+    <Property Name="Cedula" Type="varchar" MaxLength="11" />
+  </EntityType>
   <EntityType Name="Usuarios">
     <Key>
       <PropertyRef Name="IDUsuario" />
@@ -34,6 +51,7 @@
   </EntityType>
   <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
     <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saldadores" EntityType="Self.Saldadores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
