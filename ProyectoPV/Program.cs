@@ -17,7 +17,7 @@ namespace ProyectoPV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHistorico());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -24,6 +24,8 @@ namespace ProyectoPV.Presentacion
         }
 
 
+
+
         #region LOADDATA
         private void LoadData()
         {
@@ -35,5 +37,15 @@ namespace ProyectoPV.Presentacion
             }
         }
         #endregion
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+            {
+                var lst = from d in db.Saldadores
+                          select d;
+                dgvSaldadores.DataSource = lst.Where(p => p.Nombres.Contains(txtBuscar.Text)).ToList();
+            }
+        }
     }
 }

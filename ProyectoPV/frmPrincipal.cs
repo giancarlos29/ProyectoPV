@@ -75,6 +75,7 @@ namespace ProyectoPV
                     deu.CuotasVencidas--;
                     deu.UltimoPago = fecha;
                     deu.CuotasPagadas++;
+                    deu.ReditoAcumulado -= deu.ReditoMensual; 
                     db.Entry(deu).State = EntityState.Modified;
                     db.SaveChanges();
                     MessageBox.Show(deu.Nombres.ToString() +" "+ deu.Apellidos.ToString() + " Ha pagado" +
@@ -132,14 +133,36 @@ namespace ProyectoPV
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var frm = new frmClientes();
-            frm.ShowDialog();
+            var frmCliente = new frmClientes();
+            frmCliente.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             AdministrarUsuarios admUsu = new AdministrarUsuarios();
             admUsu.ShowDialog();
+        }
+
+        private void btnHistorico_Click(object sender, EventArgs e)
+        {
+            var frmHistoric = new frmHistorico();
+            frmHistoric.ShowDialog();
+        }
+
+        private void frmPrincipal_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPrincipal_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            LoadData();
+
         }
     }
     

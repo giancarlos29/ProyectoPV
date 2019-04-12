@@ -153,6 +153,16 @@ namespace ProyectoPV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Green_Refresh_button_300x300 {
+            get {
+                object obj = ResourceManager.GetObject("Green-Refresh-button-300x300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Historico {
             get {
                 object obj = ResourceManager.GetObject("Historico", resourceCulture);
@@ -266,6 +276,16 @@ namespace ProyectoPV.Properties {
         internal static System.Drawing.Bitmap pexels_photo_1020315 {
             get {
                 object obj = ResourceManager.GetObject("pexels-photo-1020315", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receiptapproved {
+            get {
+                object obj = ResourceManager.GetObject("receiptapproved", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

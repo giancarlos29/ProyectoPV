@@ -193,6 +193,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\receiptapproved.png" />
     <None Include="Resources\businessapplication_edit_male_user_thepencil_theclient_negocio_23211.png" />
     <None Include="Resources\businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png" />
     <None Include="Resources\images2.jpg" />
@@ -215,6 +216,7 @@
     <None Include="Imagenes\iconfinder_payment_1954199.png" />
     <None Include="Imagenes\dinero.jpg" />
     <None Include="Imagenes\Historico.png" />
+    <None Include="Imagenes\Green-Refresh-button-300x300.jpg" />
     <Content Include="Models\DeudorModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DeudorModel.Context.cs</LastGenOutput>

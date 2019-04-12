@@ -104,5 +104,15 @@ namespace ProyectoPV
         {
             Close();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+            {
+                var lst = from d in db.Deudores
+                          select d;
+                dgvDeudores.DataSource = lst.Where(p => p.Nombres.Contains(txtBuscar.Text)).ToList();
+            }
+        }
     }
 }

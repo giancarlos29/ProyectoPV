@@ -35,22 +35,22 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.gbUsuariosLayer = new System.Windows.Forms.GroupBox();
             this.lblNuevoUsuario = new System.Windows.Forms.Label();
-            this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
             this.lblConfirmarPassword = new System.Windows.Forms.Label();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.gbEditarUsuarios = new System.Windows.Forms.GroupBox();
+            this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.gbEditarUsuarios = new System.Windows.Forms.GroupBox();
+            this.pbUsuarios = new System.Windows.Forms.PictureBox();
             this.gbUsuariosLayer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
@@ -113,17 +113,6 @@
             this.lblNuevoUsuario.Text = "USUARIOS";
             this.lblNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pbUsuarios
-            // 
-            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pbUsuarios.Image = global::ProyectoPV.Properties.Resources.agregarProveedor;
-            this.pbUsuarios.Location = new System.Drawing.Point(3, 16);
-            this.pbUsuarios.Name = "pbUsuarios";
-            this.pbUsuarios.Size = new System.Drawing.Size(66, 55);
-            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUsuarios.TabIndex = 50;
-            this.pbUsuarios.TabStop = false;
-            // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.Color.Gray;
@@ -152,6 +141,69 @@
             this.lblConfirmarPassword.Size = new System.Drawing.Size(180, 19);
             this.lblConfirmarPassword.TabIndex = 99;
             this.lblConfirmarPassword.Text = "Confirmar Password:";
+            // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(3, 425);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsuarios.Size = new System.Drawing.Size(392, 150);
+            this.dgvUsuarios.TabIndex = 101;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(132, 391);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(246, 20);
+            this.txtBuscar.TabIndex = 103;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.BackColor = System.Drawing.Color.DarkGray;
+            this.lblBuscar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(12, 390);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(63, 19);
+            this.lblBuscar.TabIndex = 102;
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // gbEditarUsuarios
+            // 
+            this.gbEditarUsuarios.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.gbEditarUsuarios.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEditarUsuarios.Location = new System.Drawing.Point(5, 80);
+            this.gbEditarUsuarios.Name = "gbEditarUsuarios";
+            this.gbEditarUsuarios.Size = new System.Drawing.Size(390, 305);
+            this.gbEditarUsuarios.TabIndex = 105;
+            this.gbEditarUsuarios.TabStop = false;
+            this.gbEditarUsuarios.Text = "Editar Usuarios";
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.AccessibleDescription = "";
+            this.btnEditarCliente.AccessibleName = "";
+            this.btnEditarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditarCliente.Enabled = false;
+            this.btnEditarCliente.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCliente.Image = global::ProyectoPV.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_23211;
+            this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarCliente.Location = new System.Drawing.Point(263, 214);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Size = new System.Drawing.Size(115, 49);
+            this.btnEditarCliente.TabIndex = 104;
+            this.btnEditarCliente.Text = "Editar";
+            this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarCliente.UseVisualStyleBackColor = true;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnSalir
             // 
@@ -211,65 +263,16 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // dgvUsuarios
+            // pbUsuarios
             // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(3, 425);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(392, 150);
-            this.dgvUsuarios.TabIndex = 101;
-            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(132, 391);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(246, 20);
-            this.txtBuscar.TabIndex = 103;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.BackColor = System.Drawing.Color.DarkGray;
-            this.lblBuscar.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(12, 390);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(63, 19);
-            this.lblBuscar.TabIndex = 102;
-            this.lblBuscar.Text = "Buscar";
-            // 
-            // btnEditarCliente
-            // 
-            this.btnEditarCliente.AccessibleDescription = "";
-            this.btnEditarCliente.AccessibleName = "";
-            this.btnEditarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarCliente.Enabled = false;
-            this.btnEditarCliente.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCliente.Image = global::ProyectoPV.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_23211;
-            this.btnEditarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarCliente.Location = new System.Drawing.Point(263, 214);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(115, 49);
-            this.btnEditarCliente.TabIndex = 104;
-            this.btnEditarCliente.Text = "Editar";
-            this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarCliente.UseVisualStyleBackColor = true;
-            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
-            // 
-            // gbEditarUsuarios
-            // 
-            this.gbEditarUsuarios.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.gbEditarUsuarios.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEditarUsuarios.Location = new System.Drawing.Point(5, 80);
-            this.gbEditarUsuarios.Name = "gbEditarUsuarios";
-            this.gbEditarUsuarios.Size = new System.Drawing.Size(390, 305);
-            this.gbEditarUsuarios.TabIndex = 105;
-            this.gbEditarUsuarios.TabStop = false;
-            this.gbEditarUsuarios.Text = "Editar Usuarios";
+            this.pbUsuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pbUsuarios.Image = global::ProyectoPV.Properties.Resources.agregarProveedor;
+            this.pbUsuarios.Location = new System.Drawing.Point(3, 16);
+            this.pbUsuarios.Name = "pbUsuarios";
+            this.pbUsuarios.Size = new System.Drawing.Size(66, 55);
+            this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUsuarios.TabIndex = 50;
+            this.pbUsuarios.TabStop = false;
             // 
             // AdministrarUsuarios
             // 
@@ -300,8 +303,8 @@
             this.Load += new System.EventHandler(this.AdministrarUsuarios_Load);
             this.gbUsuariosLayer.ResumeLayout(false);
             this.gbUsuariosLayer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
