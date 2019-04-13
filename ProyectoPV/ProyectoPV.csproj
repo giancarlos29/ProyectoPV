@@ -67,6 +67,9 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BackUp.cs">
+      <DependentUpon>DeudorModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Deudor.cs" />
     <Compile Include="Models\Deudores.cs">
       <DependentUpon>DeudorModel.tt</DependentUpon>
@@ -129,6 +132,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaPrestamosPVDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TransactionScope.cs" />
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>

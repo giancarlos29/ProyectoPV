@@ -53,5 +53,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="backupdb" FunctionName="SistemaPrestamosPVModel.Store.backupdb" />
+    <EntitySetMapping Name="BackUps">
+      <EntityTypeMapping TypeName="SistemaPrestamosPVModel.BackUp">
+        <MappingFragment StoreEntitySet="BackUps">
+          <ScalarProperty Name="UltimoBackUp" ColumnName="UltimoBackUp" />
+          <ScalarProperty Name="IDBackUp" ColumnName="IDBackUp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

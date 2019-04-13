@@ -12,6 +12,8 @@ namespace ProyectoPV.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SistemaPrestamosPVEntities : DbContext
     {
@@ -28,5 +30,11 @@ namespace ProyectoPV.Models
         public virtual DbSet<Deudores> Deudores { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Saldadore> Saldadores { get; set; }
+        public virtual DbSet<BackUp> BackUps { get; set; }
+    
+        public virtual int backupdb()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("backupdb");
+        }
     }
 }

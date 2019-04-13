@@ -189,7 +189,7 @@
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Monto";
+            this.toolTip1.ToolTipTitle = "Información";
             // 
             // frmAbonarSaldar
             // 

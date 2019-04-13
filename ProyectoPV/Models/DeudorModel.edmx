@@ -5,6 +5,13 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="SistemaPrestamosPVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BackUps">
+          <Key>
+            <PropertyRef Name="IDBackUp" />
+          </Key>
+          <Property Name="IDBackUp" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="UltimoBackUp" Type="datetime" />
+        </EntityType>
         <EntityType Name="Deudores">
           <Key>
             <PropertyRef Name="ID" />
@@ -54,7 +61,9 @@
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
         </EntityType>
+        <Function Name="backupdb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
+          <EntitySet Name="BackUps" EntityType="Self.BackUps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Saldadores" EntityType="Self.Saldadores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
@@ -91,6 +100,8 @@
           <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
           <EntitySet Name="Usuarios" EntityType="SistemaPrestamosPVModel.Usuario" />
           <EntitySet Name="Saldadores" EntityType="SistemaPrestamosPVModel.Saldadore" />
+          <FunctionImport Name="backupdb" />
+          <EntitySet Name="BackUps" EntityType="SistemaPrestamosPVModel.BackUp" />
         </EntityContainer>
         <EntityType Name="Usuario">
           <Key>
@@ -116,6 +127,13 @@
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <Property Name="Cedula" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BackUp">
+          <Key>
+            <PropertyRef Name="IDBackUp" />
+          </Key>
+          <Property Name="IDBackUp" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UltimoBackUp" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -172,6 +190,15 @@
                 <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
                 <ScalarProperty Name="Nombres" ColumnName="Nombres" />
                 <ScalarProperty Name="IDSaldador" ColumnName="IDSaldador" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="backupdb" FunctionName="SistemaPrestamosPVModel.Store.backupdb" />
+          <EntitySetMapping Name="BackUps">
+            <EntityTypeMapping TypeName="SistemaPrestamosPVModel.BackUp">
+              <MappingFragment StoreEntitySet="BackUps">
+                <ScalarProperty Name="UltimoBackUp" ColumnName="UltimoBackUp" />
+                <ScalarProperty Name="IDBackUp" ColumnName="IDBackUp" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

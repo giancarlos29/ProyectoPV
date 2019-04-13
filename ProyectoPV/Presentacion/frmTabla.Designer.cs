@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNombres = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblCapital = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -121,6 +123,7 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(265, 26);
             this.txtNombres.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.txtNombres, "Nombre del cliente");
             // 
             // txtApellidos
             // 
@@ -130,6 +133,7 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(265, 26);
             this.txtApellidos.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.txtApellidos, "Apellidos del cliente");
             // 
             // txtCapital
             // 
@@ -138,6 +142,7 @@
             this.txtCapital.Name = "txtCapital";
             this.txtCapital.Size = new System.Drawing.Size(132, 26);
             this.txtCapital.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtCapital, "Capital del cliente");
             // 
             // txtInteres
             // 
@@ -147,6 +152,7 @@
             this.txtInteres.Size = new System.Drawing.Size(63, 26);
             this.txtInteres.TabIndex = 8;
             this.txtInteres.Text = "10";
+            this.toolTip1.SetToolTip(this.txtInteres, "Porcentaje de interés mensual");
             // 
             // dtpFechaInicializacionPrestamo
             // 
@@ -155,6 +161,7 @@
             this.dtpFechaInicializacionPrestamo.Name = "dtpFechaInicializacionPrestamo";
             this.dtpFechaInicializacionPrestamo.Size = new System.Drawing.Size(265, 26);
             this.dtpFechaInicializacionPrestamo.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.dtpFechaInicializacionPrestamo, "Fecha de cuando el cliente inició el prestamo");
             // 
             // lblTelefono
             // 
@@ -185,6 +192,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(132, 26);
             this.txtTelefono.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.txtTelefono, "Telefono primario del cliente");
             // 
             // txtTelefono2
             // 
@@ -193,6 +201,7 @@
             this.txtTelefono2.Name = "txtTelefono2";
             this.txtTelefono2.Size = new System.Drawing.Size(132, 26);
             this.txtTelefono2.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.txtTelefono2, "Telefono secundario del cliente");
             // 
             // lblDireccion
             // 
@@ -223,6 +232,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(408, 26);
             this.txtEmail.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.txtEmail, "Correo electronico del cliente");
             // 
             // txtDireccion
             // 
@@ -232,6 +242,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(408, 73);
             this.txtDireccion.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.txtDireccion, "Direcciones para localizar el cliente");
             // 
             // lblPocentaje
             // 
@@ -251,6 +262,7 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(132, 26);
             this.txtCedula.TabIndex = 23;
+            this.toolTip1.SetToolTip(this.txtCedula, "Cedula del cliente");
             // 
             // lblCedula
             // 
@@ -324,6 +336,11 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Información";
             // 
             // frmTabla
             // 
@@ -400,5 +417,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

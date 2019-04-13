@@ -28,6 +28,8 @@
     <EntitySet Name="Deudores" EntityType="SistemaPrestamosPVModel.Deudores" />
     <EntitySet Name="Usuarios" EntityType="SistemaPrestamosPVModel.Usuario" />
     <EntitySet Name="Saldadores" EntityType="SistemaPrestamosPVModel.Saldadore" />
+    <FunctionImport Name="backupdb" />
+    <EntitySet Name="BackUps" EntityType="SistemaPrestamosPVModel.BackUp" />
   </EntityContainer>
   <EntityType Name="Usuario">
     <Key>
@@ -53,5 +55,12 @@
     <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Direccion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="Cedula" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BackUp">
+    <Key>
+      <PropertyRef Name="IDBackUp" />
+    </Key>
+    <Property Name="IDBackUp" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="UltimoBackUp" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

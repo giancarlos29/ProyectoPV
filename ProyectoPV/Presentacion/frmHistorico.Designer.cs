@@ -37,6 +37,7 @@
             this.sistemaPrestamosPVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvSaldadores = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSetBindingSource)).BeginInit();
@@ -64,6 +65,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(218, 20);
             this.txtBuscar.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtBuscar, "Escriba el nombre de algun cliente que desea consultar");
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
@@ -119,6 +121,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Información";
+            // 
             // frmHistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,5 +156,6 @@
         private System.Windows.Forms.BindingSource sistemaPrestamosPVDataSetBindingSource;
         private SistemaPrestamosPVDataSet sistemaPrestamosPVDataSet;
         private System.Windows.Forms.DataGridView dgvSaldadores;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

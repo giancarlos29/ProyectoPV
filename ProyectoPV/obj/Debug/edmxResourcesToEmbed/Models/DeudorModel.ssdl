@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SistemaPrestamosPVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BackUps">
+    <Key>
+      <PropertyRef Name="IDBackUp" />
+    </Key>
+    <Property Name="IDBackUp" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="UltimoBackUp" Type="datetime" />
+  </EntityType>
   <EntityType Name="Deudores">
     <Key>
       <PropertyRef Name="ID" />
@@ -49,7 +56,9 @@
     <Property Name="Usuario" Type="varchar" MaxLength="50" />
     <Property Name="Password" Type="varchar" MaxLength="50" />
   </EntityType>
+  <Function Name="backupdb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
+    <EntitySet Name="BackUps" EntityType="Self.BackUps" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Saldadores" EntityType="Self.Saldadores" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />

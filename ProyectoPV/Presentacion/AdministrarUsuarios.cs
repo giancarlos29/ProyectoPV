@@ -121,21 +121,30 @@ namespace ProyectoPV.Presentacion
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
-            var id = GetId();
-            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+            try
             {
-                Usuario us = db.Usuarios.Find(id);
-                if (id != null)
+                var id = GetId();
+                using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
                 {
-                    us.Usuario1 = txtNombre.Text;
-                    us.Password = txtPassword.Text;
-                    db.Entry(us).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show("Se actualizó el usuario: " + us.Usuario1, "Información Actualizada");
-                    btnEditarCliente.Enabled = false;
+                    Usuario us = db.Usuarios.Find(id);
+                    if (id != null)
+                    {
+                        us.Usuario1 = txtNombre.Text;
+                        us.Password = txtPassword.Text;
+                        db.Entry(us).State = System.Data.Entity.EntityState.Modified;
+                        db.SaveChanges();
+                        MessageBox.Show("Se actualizó el usuario: " + us.Usuario1, "Información Actualizada");
+                        btnEditarCliente.Enabled = false;
+                    }
+                    LoadData();
                 }
-                LoadData();
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor haga click en un usuario.");
+            }
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

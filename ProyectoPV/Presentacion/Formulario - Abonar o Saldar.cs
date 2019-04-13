@@ -23,7 +23,7 @@ namespace ProyectoPV.Presentacion
         public frmAbonarSaldar(Deudores saldador)
         {
             InitializeComponent();
-            this.abonador = saldador;
+            abonador = saldador;
             label3.Text = saldador.Nombres + " " + saldador.Apellidos;
             label4.Text = saldador.Capital.ToString();
             label6.Text = saldador.ReditoAcumulado.ToString();

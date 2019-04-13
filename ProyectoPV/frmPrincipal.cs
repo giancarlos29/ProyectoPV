@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using ProyectoPV.Models;
 using System.Data.Entity;
 using ProyectoPV.Presentacion;
+using System.Data.SqlClient;
 
 namespace ProyectoPV
 {
@@ -61,30 +62,39 @@ namespace ProyectoPV
 
         private void btnPagarUltimaCuota_Click(object sender, EventArgs e)
         {
-            var id = GetId();
-            DateTime fecha = DateTime.Now;
-            using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+            try
             {
-                Deudores deu = db.Deudores.Find(id);
-                if (id != null)
+                var id = GetId();
+                DateTime fecha = DateTime.Now;
+                using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
                 {
-                    if (deu.CuotasVencidas < 2)
+                    Deudores deu = db.Deudores.Find(id);
+                    if (id != null)
                     {
-                        deu.CuotasPagadasATiempo++;
+                        if (deu.CuotasVencidas < 2)
+                        {
+                            deu.CuotasPagadasATiempo++;
+                        }
+                        deu.CuotasVencidas--;
+                        deu.UltimoPago = fecha;
+                        deu.CuotasPagadas++;
+                        deu.ReditoAcumulado -= deu.ReditoMensual;
+                        db.Entry(deu).State = EntityState.Modified;
+                        db.SaveChanges();
+                        MessageBox.Show(deu.Nombres.ToString() + " " + deu.Apellidos.ToString() + " Ha pagado" +
+                        " una cuota, le quedan " + deu.CuotasVencidas.ToString() + " Cuotas vencidas");
                     }
-                    deu.CuotasVencidas--;
-                    deu.UltimoPago = fecha;
-                    deu.CuotasPagadas++;
-                    deu.ReditoAcumulado -= deu.ReditoMensual; 
-                    db.Entry(deu).State = EntityState.Modified;
-                    db.SaveChanges();
-                    MessageBox.Show(deu.Nombres.ToString() +" "+ deu.Apellidos.ToString() + " Ha pagado" +
-                    " una cuota, le quedan " + deu.CuotasVencidas.ToString() + " Cuotas vencidas");
+                    LoadData();
                 }
-                LoadData();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por haga click en algun registro!","Error:No cliente seleccionado");
             }
 
         }
+    
 
         private void dgvPool_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -122,13 +132,32 @@ namespace ProyectoPV
             DialogResult = MessageBox.Show("Esta seguro de que desea salir del programa?", "Aviso!", MessageBoxButtons.YesNo,
             MessageBoxIcon.Information);
 
-            if (DialogResult == DialogResult.Yes)
+            if (DialogResult == DialogResult.Yes)//Se crea el backup de DB cada 25 dias
             {
+                using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
+                { 
+                    DateTime fechaActual = DateTime.Now;
+                    TimeSpan? diasDesdeUltimoBackUp;
+
+
+                    var MyDate = db.BackUps.Select(x => x.UltimoBackUp).Max();
+
+                    diasDesdeUltimoBackUp = fechaActual - MyDate;
+
+                    if (diasDesdeUltimoBackUp.Value.Days > 25)
+                    {
+                        SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=SistemaPrestamosPV;Integrated Security=True");
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.Connection = conn;
+                        cmd.CommandText = "backupdb";
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                    }
+                }
                 Application.Exit();
-
             }
-           
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,9 +191,9 @@ namespace ProyectoPV
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             LoadData();
-
         }
     }
     
 }
+
 

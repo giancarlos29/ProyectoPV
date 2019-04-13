@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministrarUsuarios));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.pbUsuarios = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gbUsuariosLayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuarios)).BeginInit();
@@ -58,14 +60,16 @@
             this.txtPassword.Location = new System.Drawing.Point(229, 150);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(149, 20);
-            this.txtPassword.TabIndex = 93;
+            this.txtPassword.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtPassword, "Ingrese su contraseña");
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(229, 112);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(149, 20);
-            this.txtNombre.TabIndex = 92;
+            this.txtNombre.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtNombre, "Nombre de usuario");
             // 
             // lblUsuario
             // 
@@ -129,7 +133,8 @@
             this.txtConfirmarPassword.Location = new System.Drawing.Point(229, 191);
             this.txtConfirmarPassword.Name = "txtConfirmarPassword";
             this.txtConfirmarPassword.Size = new System.Drawing.Size(149, 20);
-            this.txtConfirmarPassword.TabIndex = 100;
+            this.txtConfirmarPassword.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtConfirmarPassword, "Repipta su contraseña");
             // 
             // lblConfirmarPassword
             // 
@@ -160,7 +165,8 @@
             this.txtBuscar.Location = new System.Drawing.Point(132, 391);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(246, 20);
-            this.txtBuscar.TabIndex = 103;
+            this.txtBuscar.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtBuscar, "Escriba el nombre de un usuario para buscar");
             this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // lblBuscar
@@ -199,9 +205,10 @@
             this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(115, 49);
-            this.btnEditarCliente.TabIndex = 104;
+            this.btnEditarCliente.TabIndex = 4;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btnEditarCliente, "Haga click en un usuario y presione editar");
             this.btnEditarCliente.UseVisualStyleBackColor = true;
             this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
@@ -213,9 +220,10 @@
             this.btnSalir.Location = new System.Drawing.Point(211, 322);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(167, 52);
-            this.btnSalir.TabIndex = 87;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnSalir, "Regresar al formulario principal");
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -228,9 +236,10 @@
             this.btnAgregar.Location = new System.Drawing.Point(12, 212);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(120, 52);
-            this.btnAgregar.TabIndex = 84;
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btnAgregar, "Presione para agregar un usuario");
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
@@ -244,9 +253,10 @@
             this.btnEliminar.Location = new System.Drawing.Point(12, 322);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(159, 52);
-            this.btnEliminar.TabIndex = 83;
+            this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btnEliminar, "Advertencia:Elimina un usuario");
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnLimpiar
@@ -256,10 +266,11 @@
             this.btnLimpiar.Location = new System.Drawing.Point(12, 270);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(366, 46);
-            this.btnLimpiar.TabIndex = 82;
+            this.btnLimpiar.TabIndex = 5;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.toolTip1.SetToolTip(this.btnLimpiar, "Limpia todos los campos");
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -273,6 +284,11 @@
             this.pbUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUsuarios.TabIndex = 50;
             this.pbUsuarios.TabStop = false;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Información";
             // 
             // AdministrarUsuarios
             // 
@@ -330,5 +346,6 @@
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Button btnEditarCliente;
         private System.Windows.Forms.GroupBox gbEditarUsuarios;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
