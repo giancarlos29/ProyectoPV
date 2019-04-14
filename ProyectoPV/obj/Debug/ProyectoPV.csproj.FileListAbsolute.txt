@@ -19,3 +19,9 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.cs
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.exe
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.pdb
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csprojAssemblyReference.cache
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\PdfSharp.Charting.dll
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\PdfSharp.dll
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\PdfSharp.xml
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\PdfSharp.Charting.xml
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\de\PdfSharp.resources.dll
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\de\PdfSharp.Charting.resources.dll

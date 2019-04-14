@@ -11,6 +11,8 @@ using ProyectoPV.Models;
 using System.Data.Entity;
 using ProyectoPV.Presentacion;
 using System.Data.SqlClient;
+using PdfSharp.Pdf;
+using PdfSharp.Drawing;
 
 namespace ProyectoPV
 {
@@ -75,21 +77,41 @@ namespace ProyectoPV
                         {
                             deu.CuotasPagadasATiempo++;
                         }
-                        deu.CuotasVencidas--;
-                        deu.UltimoPago = fecha;
-                        deu.CuotasPagadas++;
-                        deu.ReditoAcumulado -= deu.ReditoMensual;
-                        db.Entry(deu).State = EntityState.Modified;
-                        db.SaveChanges();
-                        MessageBox.Show(deu.Nombres.ToString() + " " + deu.Apellidos.ToString() + " Ha pagado" +
-                        " una cuota, le quedan " + deu.CuotasVencidas.ToString() + " Cuotas vencidas");
+                            deu.CuotasVencidas--;
+                            deu.UltimoPago = fecha;
+                            deu.CuotasPagadas++;
+                            deu.ReditoAcumulado -= deu.ReditoMensual;
+                            db.Entry(deu).State = EntityState.Modified;
+                            var pregunta = MessageBox.Show("Desea guardar factura?", "Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                 if (pregunta == DialogResult.Yes) //Imprime factura para una cuota
+                                 {
+                                     PdfDocument pdf = new PdfDocument();
+                                     PdfPage pdfPage = pdf.AddPage();
+                                     pdf.Info.Title = "Factura";
+                                     XGraphics graph = XGraphics.FromPdfPage(pdfPage);
+                                     XFont fontTitulo = new XFont("Verdana", 40, XFontStyle.Bold);
+                                     XFont fontCuerpo = new XFont("Verdana", 40, XFontStyle.Bold);
+                                     graph.DrawString("PAGO DE CUOTA", fontTitulo, XBrushes.Black, new XRect(0, 0, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.Center);
+                                     graph.DrawString($"{deu.Nombres} {deu.Apellidos} ha pagado una cuota, le restan {deu.CuotasVencidas} cuotas vencidas.", fontCuerpo, XBrushes.Black, new XRect(0, 0, pdfPage.Width.Point, pdfPage.Height.Point), XStringFormats.Center);
+
+                                     string nombreMasFecha = deu.Nombres + " " + fecha.ToString("MM - dd - yy");
+                                     string pdfFilename = $@"C:\Sistema Repuestos Pavel\Facturas de Cuotas\{nombreMasFecha}.pdf";
+                                     pdf.Save(pdfFilename);
+                                 }
+                                 else //De lo contrario solo se muestra MessageBox. 
+                                 {
+                                     MessageBox.Show(deu.Nombres + " " + deu.Apellidos + " Ha pagado" +
+                                      " una cuota, le quedan " + deu.CuotasVencidas.ToString() + " Cuotas vencidas");
+                                 }
+                        
                     }
+                    db.SaveChanges();
                     LoadData();
                 }
             }
-            catch (Exception)
+            catch (Exception Men)
             {
-
+                MessageBox.Show(Men.Message);
                 MessageBox.Show("Por haga click en algun registro!","Error:No cliente seleccionado");
             }
 
