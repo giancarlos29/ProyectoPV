@@ -30,6 +30,7 @@
     <EntitySet Name="Saldadores" EntityType="SistemaPrestamosPVModel.Saldadore" />
     <FunctionImport Name="backupdb" />
     <EntitySet Name="BackUps" EntityType="SistemaPrestamosPVModel.BackUp" />
+    <FunctionImport Name="spSumCuotasVencidas" ReturnType="Collection(Int32)" />
   </EntityContainer>
   <EntityType Name="Usuario">
     <Key>

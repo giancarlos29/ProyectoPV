@@ -62,6 +62,7 @@
           <Property Name="Password" Type="varchar" MaxLength="50" />
         </EntityType>
         <Function Name="backupdb" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spSumCuotasVencidas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="SistemaPrestamosPVModelStoreContainer">
           <EntitySet Name="BackUps" EntityType="Self.BackUps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Deudores" EntityType="Self.Deudores" Schema="dbo" store:Type="Tables" />
@@ -102,6 +103,7 @@
           <EntitySet Name="Saldadores" EntityType="SistemaPrestamosPVModel.Saldadore" />
           <FunctionImport Name="backupdb" />
           <EntitySet Name="BackUps" EntityType="SistemaPrestamosPVModel.BackUp" />
+          <FunctionImport Name="spSumCuotasVencidas" ReturnType="Collection(Int32)" />
         </EntityContainer>
         <EntityType Name="Usuario">
           <Key>
@@ -202,6 +204,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spSumCuotasVencidas" FunctionName="SistemaPrestamosPVModel.Store.spSumCuotasVencidas" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

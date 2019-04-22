@@ -122,6 +122,12 @@
     <Compile Include="Presentacion\frmHistorico.Designer.cs">
       <DependentUpon>frmHistorico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporte.Designer.cs">
+      <DependentUpon>frmReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmTabla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmHistorico.resx">
       <DependentUpon>frmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporte.resx">
+      <DependentUpon>frmReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmTabla.resx">
       <DependentUpon>frmTabla.cs</DependentUpon>

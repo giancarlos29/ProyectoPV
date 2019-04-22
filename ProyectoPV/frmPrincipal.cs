@@ -88,104 +88,101 @@ namespace ProyectoPV
                             var pregunta = MessageBox.Show("Desea guardar factura?", "Factura", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                                  if (pregunta == DialogResult.Yes) //Imprime factura para una cuota
                                  {
-                                     try
-                                     {
-                                         string nombreMasFecha = deu.Nombres + " " + fecha.ToString("MM - dd - yy");
-                                         string pdfFilename = $@"C:\Sistema Repuestos Pavel\Facturas de Cuotas\{nombreMasFecha}.pdf";
-                                         FileStream fs = new FileStream(pdfFilename, FileMode.Create, FileAccess.Write, FileShare.None);
-                                         Document doc = new Document();
-                                         PdfWriter writer = PdfWriter.GetInstance(doc, fs);
-                                         doc.Open();
+                                      #region Factura
 
-                                            Paragraph espacioEntreParrrafos = new Paragraph("  ");
-                                            Paragraph fechaFactura = new Paragraph(fecha.ToString());
-                                            fechaFactura.Alignment = Element.ALIGN_RIGHT;
-                                            Paragraph linea = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
-                                            Chunk titulo = new Chunk("GRUPO INVERSIONES VERAS");
-                                            Chunk subtitulo = new Chunk("República Dominicana ");
-                                            Chunk descripcion = new Chunk("DESCRIPCION - PAGO DE CUOTA");
+                                      try
+                                      {
+                                                   string nombreMasFecha = deu.Nombres + " " + fecha.ToString("MM - dd - yy");
+                                                   string pdfFilename = $@"C:\Sistema Repuestos Pavel\Facturas de Cuotas\{nombreMasFecha}.pdf";
+                                                   FileStream fs = new FileStream(pdfFilename, FileMode.Create, FileAccess.Write, FileShare.None);
+                                                   Document doc = new Document();
+                                                   PdfWriter writer = PdfWriter.GetInstance(doc, fs);
+                                                   doc.Open();
 
-                                            descripcion.Font.Size = 15;
-                                            descripcion.Font.SetStyle("Bold");
-                                            titulo.Font.SetStyle("Bold");
-                                            titulo.Font.Size = 40;
-                                            subtitulo.Font.SetStyle("Bold");
-                                            subtitulo.Font.Size = 20;
-                                            Paragraph Titulo = new Paragraph(titulo);
-                                            Paragraph Subtitulo = new Paragraph(subtitulo);
-                                            Paragraph Descripcion = new Paragraph(descripcion);
+                                                      Paragraph espacioEntreParrrafos = new Paragraph("  ");
+                                                      Paragraph fechaFactura = new Paragraph(fecha.ToString());
+                                                      fechaFactura.Alignment = Element.ALIGN_RIGHT;
+                                                      Paragraph linea = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+                                                      Chunk titulo = new Chunk("GRUPO INVERSIONES VERAS");
+                                                      Chunk subtitulo = new Chunk("República Dominicana ");
+                                                      Chunk descripcion = new Chunk("DESCRIPCION - PAGO DE CUOTA");
 
-                                            Descripcion.Alignment = Element.ALIGN_CENTER;
-                                            Titulo.Alignment = Element.ALIGN_CENTER;
-                                            Subtitulo.Alignment = Element.ALIGN_CENTER;
-                                            doc.Add(linea);
-                                            doc.Add(Titulo);
-                                            doc.Add(Subtitulo);
-                                            doc.Add(Descripcion);
-                                            doc.Add(linea);
+                                                      descripcion.Font.Size = 15;
+                                                      descripcion.Font.SetStyle("Bold");
+                                                      titulo.Font.SetStyle("Bold");
+                                                      titulo.Font.Size = 40;
+                                                      subtitulo.Font.SetStyle("Bold");
+                                                      subtitulo.Font.Size = 20;
+                                                      Paragraph Titulo = new Paragraph(titulo);
+                                                      Paragraph Subtitulo = new Paragraph(subtitulo);
+                                                      Paragraph Descripcion = new Paragraph(descripcion);
 
-
-                                             Chunk deudorNombre = new Chunk("A nombre del deudor: " + deu.Nombres + " " + deu.Apellidos);
-                                             deudorNombre.Font.Size = 20;
-                                             deudorNombre.Font.SetStyle("Bold");
-                                             Paragraph DeudorNombre = new Paragraph(deudorNombre);
-                                             doc.Add(DeudorNombre);
-                                             doc.Add(espacioEntreParrrafos);
-                                             doc.Add(espacioEntreParrrafos);
+                                                      Descripcion.Alignment = Element.ALIGN_CENTER;
+                                                      Titulo.Alignment = Element.ALIGN_CENTER;
+                                                      Subtitulo.Alignment = Element.ALIGN_CENTER;
+                                                      doc.Add(linea);
+                                                      doc.Add(Titulo);
+                                                      doc.Add(Subtitulo);
+                                                      doc.Add(Descripcion);
+                                                      doc.Add(linea);
 
 
-                                             Chunk cuota = new Chunk("Monto pagado:RD$" + deu.ReditoMensual.ToString());
-                                             cuota.Font.Size = 20;
-                                             cuota.Font.SetStyle("Bold");
-                                             Paragraph Cuota = new Paragraph(cuota);
-                                             doc.Add(Cuota);
-                                             doc.Add(espacioEntreParrrafos);
-                                             doc.Add(espacioEntreParrrafos);
+                                                       Chunk deudorNombre = new Chunk("A nombre del deudor: " + deu.Nombres + " " + deu.Apellidos);
+                                                       deudorNombre.Font.Size = 20;
+                                                       deudorNombre.Font.SetStyle("Bold");
+                                                       Paragraph DeudorNombre = new Paragraph(deudorNombre);
+                                                       doc.Add(DeudorNombre);
+                                                       doc.Add(espacioEntreParrrafos);
+                                                       doc.Add(espacioEntreParrrafos);
 
 
-                                             Chunk reditoPendiente = new Chunk("Reditos Pendientes:RD$" + deu.ReditoAcumulado.ToString());
-                                             reditoPendiente.Font.Size = 20;
-                                             reditoPendiente.Font.SetStyle("Bold");
-                                             Paragraph ReditoPendiente = new Paragraph(reditoPendiente);
-                                             doc.Add(ReditoPendiente);
-                                             doc.Add(espacioEntreParrrafos);
-                                             doc.Add(espacioEntreParrrafos);
-
-                                             Chunk capitalPendiente = new Chunk("Capital Pendientes:RD$" + deu.Capital.ToString());
-                                             capitalPendiente.Font.Size = 20;
-                                             capitalPendiente.Font.SetStyle("Bold");
-                                             Paragraph CapitalPendiente = new Paragraph(capitalPendiente);
-                                             doc.Add(CapitalPendiente);
-
-                                             for (int i = 0; i < 8; i++)
-                                             {
-                                                 doc.Add(espacioEntreParrrafos);
-                                             }
-                                             doc.Add(linea);
-                                             doc.Add(fechaFactura);
+                                                       Chunk cuota = new Chunk("Monto pagado:RD$" + deu.ReditoMensual.ToString());
+                                                       cuota.Font.Size = 20;
+                                                       cuota.Font.SetStyle("Bold");
+                                                       Paragraph Cuota = new Paragraph(cuota);
+                                                       doc.Add(Cuota);
+                                                       doc.Add(espacioEntreParrrafos);
+                                                       doc.Add(espacioEntreParrrafos);
 
 
-                                             
+                                                       Chunk reditoPendiente = new Chunk("Reditos Pendientes:RD$" + deu.ReditoAcumulado.ToString());
+                                                       reditoPendiente.Font.Size = 20;
+                                                       reditoPendiente.Font.SetStyle("Bold");
+                                                       Paragraph ReditoPendiente = new Paragraph(reditoPendiente);
+                                                       doc.Add(ReditoPendiente);
+                                                       doc.Add(espacioEntreParrrafos);
+                                                       doc.Add(espacioEntreParrrafos);
 
-                                             //MessageBox.Show("Factura creada, buscar PDF en carpeta Facturas Cuotas", 
-                                             //                    "Factura Completada!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                       Chunk capitalPendiente = new Chunk("Capital Pendientes:RD$" + deu.Capital.ToString());
+                                                       capitalPendiente.Font.Size = 20;
+                                                       capitalPendiente.Font.SetStyle("Bold");
+                                                       Paragraph CapitalPendiente = new Paragraph(capitalPendiente);
+                                                       doc.Add(CapitalPendiente);
 
-                                                    
+                                                       for (int i = 0; i < 8; i++)
+                                                       {
+                                                           doc.Add(espacioEntreParrrafos);
+                                                       }
+                                                       doc.Add(linea);
+                                                       doc.Add(fechaFactura);
 
-                                            doc.Close();
-                                            string pdfPath = Path.Combine(Application.StartupPath, pdfFilename);
+                                                      doc.Close();
+                                                      string pdfPath = Path.Combine(Application.StartupPath, pdfFilename);
 
-                                            Process.Start(pdfPath);
-                            }
-                                            catch (Exception m)
-                                            {
-                                               MessageBox.Show(m.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                            }
-                                        
+                                                      Process.Start(pdfPath);
+                                      }
 
-                        }
-                                 else //De lo contrario solo se muestra MessageBox. 
-                                 {
+                                      catch (Exception m)
+                                      {
+                                        MessageBox.Show(m.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                      }
+
+                                     #endregion
+
+                                 }
+
+                        else //De lo contrario solo se muestra MessageBox. 
+                        {
                                      MessageBox.Show(deu.Nombres + " " + deu.Apellidos + " Ha pagado" +
                                       " una cuota, le quedan " + deu.CuotasVencidas.ToString() + " Cuotas vencidas");
                                  }

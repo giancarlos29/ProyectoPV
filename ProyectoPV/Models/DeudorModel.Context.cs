@@ -36,5 +36,10 @@ namespace ProyectoPV.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("backupdb");
         }
+    
+        public virtual ObjectResult<Nullable<int>> spSumCuotasVencidas()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("spSumCuotasVencidas");
+        }
     }
 }

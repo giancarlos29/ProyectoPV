@@ -62,5 +62,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spSumCuotasVencidas" FunctionName="SistemaPrestamosPVModel.Store.spSumCuotasVencidas" />
   </EntityContainerMapping>
 </Mapping>
