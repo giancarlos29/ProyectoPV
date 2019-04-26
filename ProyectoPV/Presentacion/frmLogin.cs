@@ -18,7 +18,7 @@ namespace ProyectoPV
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
                string query = (from c in db.Usuarios
-                               where c.Usuario1 == txtUsuario.Text && c.Password == textBox1.Text
+                               where c.Usuario1 == txtUsuario.Text && c.Password == txtPassword.Text
                                select c.Usuario1).FirstOrDefault();
                 if (query != null)
                 {

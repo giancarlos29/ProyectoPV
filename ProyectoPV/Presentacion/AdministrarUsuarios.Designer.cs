@@ -167,7 +167,7 @@
             this.txtBuscar.Size = new System.Drawing.Size(246, 20);
             this.txtBuscar.TabIndex = 8;
             this.toolTip1.SetToolTip(this.txtBuscar, "Escriba el nombre de un usuario para buscar");
-            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 

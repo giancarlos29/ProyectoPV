@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.lblHistoricoClientes = new System.Windows.Forms.Label();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
             this.sistemaPrestamosPVDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvSaldadores = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldadores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.lblBuscar);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblHistoricoClientes);
             this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -57,26 +57,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(941, 247);
             this.panel1.TabIndex = 2;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BackColor = System.Drawing.Color.LavenderBlush;
-            this.txtBuscar.Location = new System.Drawing.Point(679, 217);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(218, 20);
-            this.txtBuscar.TabIndex = 7;
-            this.toolTip1.SetToolTip(this.txtBuscar, "Escriba el nombre de algun cliente que desea consultar");
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(491, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(450, 32);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "HISTORICO - CLIENTES SALDADOS";
             // 
             // lblBuscar
             // 
@@ -88,6 +68,35 @@
             this.lblBuscar.Size = new System.Drawing.Size(144, 19);
             this.lblBuscar.TabIndex = 17;
             this.lblBuscar.Text = "Buscar cliente:";
+            // 
+            // lblHistoricoClientes
+            // 
+            this.lblHistoricoClientes.AutoSize = true;
+            this.lblHistoricoClientes.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistoricoClientes.Location = new System.Drawing.Point(491, 75);
+            this.lblHistoricoClientes.Name = "lblHistoricoClientes";
+            this.lblHistoricoClientes.Size = new System.Drawing.Size(450, 32);
+            this.lblHistoricoClientes.TabIndex = 8;
+            this.lblHistoricoClientes.Text = "HISTORICO - CLIENTES SALDADOS";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.BackColor = System.Drawing.Color.LavenderBlush;
+            this.txtBuscar.Location = new System.Drawing.Point(679, 217);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(218, 20);
+            this.txtBuscar.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtBuscar, "Escriba el nombre de algun cliente que desea consultar");
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoPV.Properties.Resources.Historico;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(343, 242);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // sistemaPrestamosPVDataSet
             // 
@@ -112,15 +121,6 @@
             this.dgvSaldadores.Size = new System.Drawing.Size(941, 269);
             this.dgvSaldadores.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoPV.Properties.Resources.Historico;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 242);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // toolTip1
             // 
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
@@ -139,10 +139,10 @@
             this.Load += new System.EventHandler(this.frmHistorico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaldadores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,7 +150,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHistoricoClientes;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.BindingSource sistemaPrestamosPVDataSetBindingSource;

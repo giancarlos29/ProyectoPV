@@ -62,7 +62,7 @@ namespace ProyectoPV.Presentacion
             LoadData();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {

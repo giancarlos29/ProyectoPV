@@ -23,13 +23,13 @@ namespace ProyectoPV.Presentacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAplicar_Click(object sender, EventArgs e)
         {
             using (SistemaPrestamosPVEntities db = new SistemaPrestamosPVEntities())
             {
                 try
                 {
-                    float abono = Convert.ToSingle(textBox1.Text);
+                    float abono = Convert.ToSingle(txtMontoAbonar.Text);
                     DateTime fechaHoy = DateTime.Now;
 
                     if (abonador.ReditoAcumulado > 0)
@@ -93,9 +93,10 @@ namespace ProyectoPV.Presentacion
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
