@@ -3,14 +3,17 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\ProyectoPV.ex
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\ProyectoPV.pdb
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.dll
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.SqlServer.dll
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\itextsharp.dll
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\EntityFramework.SqlServer.xml
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\itextsharp.xml
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmClientes.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmLogin.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.frmPrincipal.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.AdministrarUsuarios.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmAbonarSaldar.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmHistorico.resources
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmReporte.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmTabla.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Properties.Resources.resources
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csproj.GenerateResource.cache
@@ -18,7 +21,3 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.cs
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csproj.CopyComplete
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.exe
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.pdb
-D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csprojAssemblyReference.cache
-D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\itextsharp.dll
-D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\itextsharp.xml
-D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmReporte.resources

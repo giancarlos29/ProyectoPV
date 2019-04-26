@@ -58,22 +58,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Presentacion\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="Presentacion\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="Presentacion\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BackUp.cs">
       <DependentUpon>DeudorModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Deudor.cs" />
     <Compile Include="Models\Deudores.cs">
       <DependentUpon>DeudorModel.tt</DependentUpon>
     </Compile>
@@ -92,10 +91,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DeudorModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="frmClientes.cs">
+    <Compile Include="Presentacion\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.Designer.cs">
+    <Compile Include="Presentacion\frmClientes.Designer.cs">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Saldadore.cs">
@@ -142,13 +141,13 @@
       <DependentUpon>SistemaPrestamosPVDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TransactionScope.cs" />
-    <EmbeddedResource Include="frmClientes.resx">
+    <EmbeddedResource Include="Presentacion\frmClientes.resx">
       <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Presentacion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\AdministrarUsuarios.resx">

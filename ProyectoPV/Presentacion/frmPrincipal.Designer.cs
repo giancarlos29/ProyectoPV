@@ -56,18 +56,18 @@
             this.deudoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.deudoresTableAdapter = new ProyectoPV.SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnPagos = new System.Windows.Forms.Button();
             this.btnPagarUltimaCuota = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deudoresTableAdapter = new ProyectoPV.SistemaPrestamosPVDataSetTableAdapters.DeudoresTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPool)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deudoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sistemaPrestamosPVDataSet)).BeginInit();
@@ -298,50 +298,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ACCIONES";
             // 
-            // deudoresTableAdapter
-            // 
-            this.deudoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.groupBox1.Controls.Add(this.btnHistorico);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(949, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(484, 175);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "FORMULARIOS";
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(1444, 191);
-            this.splitter1.TabIndex = 13;
-            this.splitter1.TabStop = false;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnActualizar.Image = global::ProyectoPV.Properties.Resources.Green_Refresh_button_300x300;
-            this.btnActualizar.Location = new System.Drawing.Point(736, 143);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(48, 43);
-            this.btnActualizar.TabIndex = 13;
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // btnPagos
             // 
             this.btnPagos.BackgroundImage = global::ProyectoPV.Properties.Resources.iconfinder_payment_1954199;
@@ -373,17 +329,27 @@
             this.btnPagarUltimaCuota.UseVisualStyleBackColor = true;
             this.btnPagarUltimaCuota.Click += new System.EventHandler(this.btnPagarUltimaCuota_Click);
             // 
-            // pictureBox1
+            // deudoresTableAdapter
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pictureBox1.BackgroundImage = global::ProyectoPV.Properties.Resources.dinero;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 387);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1444, 235);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.deudoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.groupBox1.Controls.Add(this.btnHistorico);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnSalir);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(949, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(484, 175);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "FORMULARIOS";
             // 
             // btnHistorico
             // 
@@ -425,7 +391,7 @@
             this.button3.Text = "Reportes";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button2_Click);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -487,6 +453,40 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(1444, 191);
+            this.splitter1.TabIndex = 13;
+            this.splitter1.TabStop = false;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar.Image = global::ProyectoPV.Properties.Resources.Green_Refresh_button_300x300;
+            this.btnActualizar.Location = new System.Drawing.Point(736, 143);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(48, 43);
+            this.btnActualizar.TabIndex = 13;
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackgroundImage = global::ProyectoPV.Properties.Resources.dinero;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 387);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1444, 235);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
