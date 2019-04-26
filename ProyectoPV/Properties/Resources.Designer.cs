@@ -73,6 +73,16 @@ namespace ProyectoPV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _36978940_m_300x230 {
+            get {
+                object obj = ResourceManager.GetObject("36978940_m-300x230", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aceptar {
             get {
                 object obj = ResourceManager.GetObject("aceptar", resourceCulture);
@@ -193,6 +203,16 @@ namespace ProyectoPV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_payment_19541991 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_payment_19541991", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_edit_clear_118917 {
             get {
                 object obj = ResourceManager.GetObject("if_edit-clear_118917", resourceCulture);
@@ -243,6 +263,16 @@ namespace ProyectoPV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images3 {
+            get {
+                object obj = ResourceManager.GetObject("images3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_icon {
             get {
                 object obj = ResourceManager.GetObject("login-icon", resourceCulture);
@@ -266,6 +296,16 @@ namespace ProyectoPV.Properties {
         internal static System.Drawing.Bitmap Logout_icon {
             get {
                 object obj = ResourceManager.GetObject("Logout-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ordenlist1 {
+            get {
+                object obj = ResourceManager.GetObject("ordenlist1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

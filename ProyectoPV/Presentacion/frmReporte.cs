@@ -24,11 +24,7 @@ namespace ProyectoPV.Presentacion
         {
             using (var db = new SistemaPrestamosPVEntities())
             {
-                 var totalCuotas =
-                 (from deu in db.Deudores
-                  select deu.CuotasVencidas)
-                 .Sum();
-                label13.Text = totalCuotas.ToString();
+                label13.Text = db.spSumCuotasVencidas().Sum().ToString();
 
                 var totalACobrar =
                  (from deu in db.Deudores
@@ -58,13 +54,11 @@ namespace ProyectoPV.Presentacion
                  .Count();
                 label10.Text = totalClientesEnAtraso.ToString();
 
-                var mayorDeudor =  from deu in db.Deudores
-                orderby deu.Capital ascending
-                select deu.Nombres.FirstOrDefault();
+                var mayorDeudor = db.Deudores.OrderBy(x => x.Capital).FirstOrDefault();
 
-                label11.Text = mayorDeudor.ToString();
+                label11.Text = mayorDeudor.Nombres + " " + mayorDeudor.Apellidos;
 
-
+                label15.Text = DateTime.Now.ToString("dd/MM/yyyy");
             }
         }
     }

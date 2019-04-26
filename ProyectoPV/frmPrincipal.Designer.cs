@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPool = new System.Windows.Forms.DataGridView();
@@ -43,7 +43,6 @@
             this.reditoAcumuladoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuotasVencidasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaInicializacionPrestamoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CuotasGeneradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ultimoPagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuotasPagadasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuotasPagadasATiempoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@
             this.telefono2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CuotasGeneradas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deudoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sistemaPrestamosPVDataSet = new ProyectoPV.SistemaPrestamosPVDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -64,6 +64,7 @@
             this.btnPagarUltimaCuota = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHistorico = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -94,14 +95,14 @@
             this.dgvPool.AutoGenerateColumns = false;
             this.dgvPool.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvPool.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPool.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPool.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPool.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPool.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -129,14 +130,14 @@
             this.dgvPool.Location = new System.Drawing.Point(0, 191);
             this.dgvPool.MultiSelect = false;
             this.dgvPool.Name = "dgvPool";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPool.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPool.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPool.RowHeadersVisible = false;
             this.dgvPool.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPool.Size = new System.Drawing.Size(1444, 196);
@@ -205,12 +206,6 @@
             this.fechaInicializacionPrestamoDataGridViewTextBoxColumn.Name = "fechaInicializacionPrestamoDataGridViewTextBoxColumn";
             this.fechaInicializacionPrestamoDataGridViewTextBoxColumn.Width = 102;
             // 
-            // CuotasGeneradas
-            // 
-            this.CuotasGeneradas.DataPropertyName = "CuotasGeneradas";
-            this.CuotasGeneradas.HeaderText = "Cuotas Generadas";
-            this.CuotasGeneradas.Name = "CuotasGeneradas";
-            // 
             // ultimoPagoDataGridViewTextBoxColumn
             // 
             this.ultimoPagoDataGridViewTextBoxColumn.DataPropertyName = "UltimoPago";
@@ -272,6 +267,12 @@
             this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
             // 
+            // CuotasGeneradas
+            // 
+            this.CuotasGeneradas.DataPropertyName = "CuotasGeneradas";
+            this.CuotasGeneradas.HeaderText = "Cuotas Generadas";
+            this.CuotasGeneradas.Name = "CuotasGeneradas";
+            // 
             // deudoresBindingSource
             // 
             this.deudoresBindingSource.DataMember = "Deudores";
@@ -305,15 +306,16 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.btnHistorico);
+            this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnSalir);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(998, 11);
+            this.groupBox1.Location = new System.Drawing.Point(949, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(435, 175);
+            this.groupBox1.Size = new System.Drawing.Size(484, 175);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FORMULARIOS";
@@ -393,7 +395,7 @@
             this.btnHistorico.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistorico.Image = global::ProyectoPV.Properties.Resources.receiptapproved;
             this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorico.Location = new System.Drawing.Point(42, 97);
+            this.btnHistorico.Location = new System.Drawing.Point(15, 97);
             this.btnHistorico.Margin = new System.Windows.Forms.Padding(2);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Size = new System.Drawing.Size(159, 66);
@@ -403,6 +405,27 @@
             this.btnHistorico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHistorico.UseVisualStyleBackColor = true;
             this.btnHistorico.Click += new System.EventHandler(this.btnHistorico_Click);
+            // 
+            // button3
+            // 
+            this.button3.AccessibleDescription = "";
+            this.button3.AccessibleName = "";
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Image = global::ProyectoPV.Properties.Resources.ordenlist1;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(178, 60);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 66);
+            this.button3.TabIndex = 52;
+            this.button3.Tag = "";
+            this.button3.Text = "Reportes";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button2_Click);
             // 
             // button2
             // 
@@ -414,7 +437,7 @@
             this.button2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(269, 97);
+            this.button2.Location = new System.Drawing.Point(323, 97);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(148, 66);
@@ -435,7 +458,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = global::ProyectoPV.Properties.Resources.Logout_icon;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(269, 27);
+            this.btnSalir.Location = new System.Drawing.Point(323, 27);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(148, 66);
@@ -455,7 +478,7 @@
             this.button1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::ProyectoPV.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_23211;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(42, 27);
+            this.button1.Location = new System.Drawing.Point(15, 27);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 66);
@@ -548,5 +571,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnHistorico;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button button3;
     }
 }
