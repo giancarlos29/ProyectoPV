@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace ProyectoPV.Presentacion
 {
-    public partial class AdministrarUsuarios : Form
+    public partial class frmAdministrarUsuarios : Form
     {
-        public AdministrarUsuarios()
+        public frmAdministrarUsuarios()
         {
             InitializeComponent();
         }

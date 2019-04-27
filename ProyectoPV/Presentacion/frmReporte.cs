@@ -48,7 +48,7 @@ namespace ProyectoPV.Presentacion
                  .Count();
                 label10.Text = totalClientesEnAtraso.ToString();
 
-                var mayorDeudor = db.Deudores.OrderBy(x => x.Capital).FirstOrDefault();
+                var mayorDeudor = db.Deudores.OrderByDescending(x => x.Capital).FirstOrDefault();
 
                 label11.Text = mayorDeudor.Nombres + " " + mayorDeudor.Apellidos;
 

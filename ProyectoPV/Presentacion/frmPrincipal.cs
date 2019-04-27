@@ -268,7 +268,7 @@ namespace ProyectoPV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdministrarUsuarios admUsu = new AdministrarUsuarios();
+            frmAdministrarUsuarios admUsu = new frmAdministrarUsuarios();
             admUsu.ShowDialog();
         }
 
