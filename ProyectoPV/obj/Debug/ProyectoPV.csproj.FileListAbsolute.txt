@@ -22,3 +22,7 @@ D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.ex
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.pdb
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.csprojAssemblyReference.cache
 D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.Presentacion.frmAdministrarUsuarios.resources
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\ProyectoPV.exe.manifest
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\bin\Debug\ProyectoPV.application
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.exe.manifest
+D:\Proyectos\SistemaPrestamosPavel\ProyectoPV\ProyectoPV\obj\Debug\ProyectoPV.application
