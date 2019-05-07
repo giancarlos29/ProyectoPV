@@ -57,10 +57,10 @@ namespace ProyectoPV.Presentacion
                     oTabla.Nombres = txtNombres.Text;
                     oTabla.Apellidos = txtApellidos.Text;
                     oTabla.Capital = Convert.ToSingle(txtCapital.Text);
-                    oTabla.CuotasVencidas = 0;
                     var interes = Convert.ToSingle(txtInteres.Text);
                     oTabla.Interes = interes;
                     oTabla.ReditoMensual = Convert.ToSingle(txtCapital.Text) * (interes / 100);
+                    oTabla.CuotasVencidas = 0;
                     if (oTabla.CuotasVencidas == 0)
                     {
                         oTabla.ReditoAcumulado = oTabla.ReditoMensual;
@@ -69,6 +69,7 @@ namespace ProyectoPV.Presentacion
                         oTabla.ReditoAcumulado = oTabla.ReditoMensual * oTabla.CuotasVencidas;
                     }
                     oTabla.FechaInicializacionPrestamo = oTabla.UltimoPago = dtpFechaInicializacionPrestamo.Value;
+                    oTabla.CuotasGeneradas = 0;
                     oTabla.CuotasPagadas = 0;
                     oTabla.CuotasPagadasATiempo = 0;
                     oTabla.Score = 1;

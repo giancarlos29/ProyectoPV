@@ -362,6 +362,7 @@
             // 
             // CuotasGeneradas
             // 
+            this.CuotasGeneradas.DataPropertyName = "CuotasGeneradas";
             this.CuotasGeneradas.HeaderText = "Cuotas Generadas";
             this.CuotasGeneradas.Name = "CuotasGeneradas";
             // 

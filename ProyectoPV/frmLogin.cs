@@ -36,15 +36,16 @@ namespace ProyectoPV
                     fechaActual.ToString("dd/MM/yyyy"), "Confirme fecha correcta", buttons);
                     if (result == DialogResult.Yes)
                     {
-                        TimeSpan periodo;
+                        TimeSpan cuotasGen;
     
                         var lst = from d in db.Deudores
                               select d;
 
                         foreach (var item in lst)
                         {
-                            periodo = fechaActual - item.UltimoPago;
-                            item.CuotasVencidas = periodo.Days / 30;
+                            cuotasGen = fechaActual - item.FechaInicializacionPrestamo;
+                            item.CuotasGeneradas = cuotasGen.Days / 30;
+                            item.CuotasVencidas = item.CuotasGeneradas - item.CuotasPagadas;
                             db.Entry(item).State = System.Data.Entity.EntityState.Modified;
                         }
                             db.SaveChanges();
